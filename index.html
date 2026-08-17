@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Encanto Kids Infláveis | Diversão para sua festa</title>
+
+  <meta
+    name="description"
+    content="Aluguel de brinquedos infláveis para festas. Faça seu orçamento online com a Encanto Kids Infláveis."
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+    :root{
+      --azul:#0b5ed7;
+      --azul-escuro:#083b8f;
+      --azul-claro:#eaf3ff;
+
+      --laranja:#ff7a00;
+      --laranja-escuro:#e56800;
+
+      --texto:#182230;
+      --texto-suave:#65758b;
+
+      --branco:#ffffff;
+      --fundo:#f6f8fb;
+
+      --borda:#e5e9f0;
+
+      --sombra:
+        0 12px 35px rgba(15, 35, 60, 0.10);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background:var(--fundo);
+      color:var(--texto);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    button,
+    input{
+      font:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      background:rgba(255,255,255,.97);
+
+      position:sticky;
+      top:0;
+
+      z-index:1000;
+
+      border-bottom:1px solid rgba(0,0,0,.06);
+
+      backdrop-filter:blur(12px);
+    }
+
+    .header-container{
+      max-width:1200px;
+
+      margin:auto;
+
+      padding:14px 22px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+
+      gap:11px;
+    }
+
+    .logo-icon{
+      width:46px;
+      height:46px;
+
+      border-radius:14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--azul),
+          #438cff
+        );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:white;
+      font-size:21px;
+
+      box-shadow:
+        0 8px 20px rgba(11,94,215,.25);
+    }
+
+    .logo-text strong{
+      display:block;
+
+      font-size:19px;
+      color:var(--azul-escuro);
+
+      line-height:1;
+    }
+
+    .logo-text span{
+      font-size:12px;
+      color:var(--texto-suave);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    nav a{
+      font-size:14px;
+      font-weight:700;
+
+      color:#445064;
+
+      transition:.2s;
+    }
+
+    nav a:hover{
+      color:var(--laranja);
+    }
+
+    .btn-header{
+      background:var(--laranja);
+      color:white !important;
+
+      padding:11px 18px;
+
+      border-radius:11px;
+
+      box-shadow:
+        0 7px 18px rgba(255,122,0,.23);
+
+      transition:.25s;
+    }
+
+    .btn-header:hover{
+      background:var(--laranja-escuro);
+      transform:translateY(-2px);
+    }
+
+    .menu-mobile{
+      display:none;
+
+      width:42px;
+      height:42px;
+
+      border:0;
+
+      background:#f2f5f8;
+
+      border-radius:10px;
+
+      cursor:pointer;
+
+      font-size:19px;
+
+      color:var(--azul-escuro);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      position:relative;
+
+      overflow:hidden;
+
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(255,122,0,.18),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(11,94,215,.15),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #eef6ff
+        );
+    }
+
+    .hero::after{
+      content:"";
+
+      position:absolute;
+
+      width:350px;
+      height:350px;
+
+      background:var(--laranja);
+
+      border-radius:50%;
+
+      right:-230px;
+      bottom:-170px;
+
+      opacity:.07;
+    }
+
+    .hero-container{
+      min-height:590px;
+
+      max-width:1200px;
+
+      margin:auto;
+
+      padding:65px 22px;
+
+      display:grid;
+
+      grid-template-columns:
+        1.05fr
+        .95fr;
+
+      align-items:center;
+
+      gap:55px;
+    }
+
+    .hero-badge{
+      width:max-content;
+
+      max-width:100%;
+
+      display:flex;
+      align-items:center;
+
+      gap:8px;
+
+      background:#fff3e7;
+
+      border:1px solid #ffd9b6;
+
+      color:#c45c00;
+
+      padding:8px 13px;
+
+      border-radius:999px;
+
+      font-size:13px;
+      font-weight:800;
+
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:56px;
+
+      line-height:1.05;
+
+      letter-spacing:-2.1px;
+
+      max-width:690px;
+
+      color:#10243f;
+    }
+
+    .hero h1 span{
+      color:var(--laranja);
+    }
+
+    .hero p{
+      margin-top:20px;
+
+      max-width:590px;
+
+      color:var(--texto-suave);
+
+      font-size:18px;
+      line-height:1.65;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:13px;
+
+      margin-top:30px;
+    }
+
+    .btn-principal,
+    .btn-secundario{
+      min-height:52px;
+
+      border-radius:12px;
+
+      padding:0 21px;
+
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+
+      gap:9px;
+
+      font-weight:800;
+
+      transition:.25s;
+    }
+
+    .btn-principal{
+      color:white;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--laranja),
+          #ff9d42
+        );
+
+      box-shadow:
+        0 10px 25px rgba(255,122,0,.26);
+    }
+
+    .btn-principal:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-secundario{
+      background:white;
+
+      border:1px solid var(--borda);
+
+      color:var(--azul-escuro);
+
+      box-shadow:
+        0 6px 17px rgba(0,0,0,.05);
+    }
+
+    .btn-secundario:hover{
+      border-color:#b9d2f8;
+      transform:translateY(-3px);
+    }
+
+    .hero-beneficios{
+      margin-top:32px;
+
+      display:flex;
+      flex-wrap:wrap;
+
+      gap:22px;
+
+      color:#536276;
+
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .hero-beneficios div{
+      display:flex;
+      align-items:center;
+
+      gap:8px;
+    }
+
+    .hero-beneficios i{
+      color:#16a34a;
+    }
+
+    /* =========================
+       HERO CARD
+    ========================= */
+
+    .hero-card{
+      position:relative;
+
+      border-radius:28px;
+
+      min-height:430px;
+
+      background:
+        linear-gradient(
+          150deg,
+          var(--azul),
+          #073c94
+        );
+
+      padding:25px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+
+      overflow:hidden;
+
+      box-shadow:
+        0 28px 60px rgba(8,59,143,.28);
+    }
+
+    .hero-card::before{
+      content:"";
+
+      position:absolute;
+
+      width:260px;
+      height:260px;
+
+      border-radius:50%;
+
+      background:white;
+
+      opacity:.07;
+
+      right:-100px;
+      top:-100px;
+    }
+
+    .hero-card::after{
+      content:"";
+
+      position:absolute;
+
+      width:210px;
+      height:210px;
+
+      border-radius:50%;
+
+      background:var(--laranja);
+
+      opacity:.18;
+
+      left:-80px;
+      bottom:-80px;
+    }
+
+    .hero-card-top{
+      position:relative;
+      z-index:2;
+
+      color:white;
+    }
+
+    .hero-card-top small{
+      opacity:.76;
+      font-weight:700;
+    }
+
+    .hero-card-top h2{
+      margin-top:7px;
+      font-size:29px;
+    }
+
+    .brinquedo-ilustracao{
+      position:relative;
+      z-index:2;
+
+      margin:auto;
+
+      width:230px;
+      height:230px;
+
+      border-radius:50%;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff,
+          #dfeaff
+        );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      box-shadow:
+        0 20px 35px rgba(0,0,0,.18);
+    }
+
+    .brinquedo-ilustracao i{
+      font-size:105px;
+      color:var(--laranja);
+    }
+
+    .hero-card-bottom{
+      position:relative;
+      z-index:2;
+
+      background:rgba(255,255,255,.12);
+
+      border:1px solid rgba(255,255,255,.14);
+
+      padding:14px;
+
+      border-radius:14px;
+
+      color:white;
+
+      backdrop-filter:blur(8px);
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:12px;
+    }
+
+    .hero-card-bottom strong{
+      font-size:14px;
+    }
+
+    .hero-card-bottom span{
+      font-size:12px;
+      opacity:.8;
+    }
+
+    .hero-card-bottom i{
+      font-size:25px;
+      color:#ffb269;
+    }
+
+    /* =========================
+       BENEFÍCIOS
+    ========================= */
+
+    .beneficios{
+      background:white;
+      border-bottom:1px solid var(--borda);
+    }
+
+    .beneficios-container{
+      max-width:1200px;
+
+      margin:auto;
+
+      padding:24px 22px;
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:20px;
+    }
+
+    .beneficio{
+      display:flex;
+      align-items:center;
+
+      gap:12px;
+    }
+
+    .beneficio-icon{
+      flex-shrink:0;
+
+      width:46px;
+      height:46px;
+
+      border-radius:12px;
+
+      background:var(--azul-claro);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:var(--azul);
+
+      font-size:19px;
+    }
+
+    .beneficio strong{
+      display:block;
+
+      font-size:13px;
+      color:#23354c;
+    }
+
+    .beneficio span{
+      display:block;
+
+      margin-top:3px;
+
+      font-size:12px;
+      color:var(--texto-suave);
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    .section{
+      padding:85px 22px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-header{
+      text-align:center;
+
+      max-width:650px;
+
+      margin:
+        0 auto
+        45px;
+    }
+
+    .section-header span{
+      color:var(--laranja);
+
+      text-transform:uppercase;
+
+      font-weight:900;
+
+      font-size:12px;
+
+      letter-spacing:1.3px;
+    }
+
+    .section-header h2{
+      margin-top:9px;
+
+      font-size:37px;
+
+      letter-spacing:-1px;
+
+      color:#152a45;
+    }
+
+    .section-header p{
+      margin-top:10px;
+
+      color:var(--texto-suave);
+
+      line-height:1.6;
+    }
+
+    /* =========================
+       BRINQUEDOS
+    ========================= */
+
+    .brinquedos-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:22px;
+    }
+
+    .produto-card{
+      background:white;
+
+      border-radius:19px;
+
+      overflow:hidden;
+
+      border:1px solid var(--borda);
+
+      box-shadow:
+        0 10px 30px rgba(13,37,72,.06);
+
+      transition:.28s;
+    }
+
+    .produto-card:hover{
+      transform:translateY(-7px);
+
+      box-shadow:
+        0 18px 40px rgba(13,37,72,.12);
+    }
+
+    .produto-img{
+      height:215px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #e9f3ff,
+          #fff5eb
+        );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      position:relative;
+    }
+
+    .produto-img i{
+      font-size:82px;
+      color:var(--azul);
+    }
+
+    .produto-badge{
+      position:absolute;
+
+      top:13px;
+      left:13px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      padding:6px 10px;
+
+      border-radius:8px;
+
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .produto-content{
+      padding:20px;
+    }
+
+    .produto-content h3{
+      font-size:20px;
+      color:#1d314d;
+    }
+
+    .produto-content p{
+      margin-top:8px;
+
+      min-height:42px;
+
+      color:var(--texto-suave);
+
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .produto-footer{
+      margin-top:18px;
+
+      padding-top:16px;
+
+      border-top:1px solid #edf0f3;
+
+      display:flex;
+
+      justify-content:space-between;
+      align-items:center;
+
+      gap:12px;
+    }
+
+    .produto-preco small{
+      display:block;
+
+      color:var(--texto-suave);
+
+      font-size:11px;
+    }
+
+    .produto-preco strong{
+      color:var(--azul-escuro);
+
+      font-size:20px;
+    }
+
+    .produto-btn{
+      border:0;
+
+      background:var(--laranja);
+      color:white;
+
+      height:40px;
+
+      padding:0 14px;
+
+      border-radius:9px;
+
+      cursor:pointer;
+
+      font-size:12px;
+      font-weight:900;
+
+      transition:.2s;
+    }
+
+    .produto-btn:hover{
+      background:var(--laranja-escuro);
+    }
+
+    /* =========================
+       COMO FUNCIONA
+    ========================= */
+
+    .como-funciona{
+      background:white;
+    }
+
+    .passos-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:20px;
+    }
+
+    .passo{
+      text-align:center;
+
+      padding:27px 18px;
+
+      border-radius:17px;
+
+      background:#f9fbfd;
+
+      border:1px solid var(--borda);
+
+      position:relative;
+    }
+
+    .passo-numero{
+      margin:auto;
+
+      width:47px;
+      height:47px;
+
+      border-radius:14px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:var(--azul);
+
+      color:white;
+
+      font-size:17px;
+      font-weight:900;
+
+      box-shadow:
+        0 7px 16px rgba(11,94,215,.25);
+    }
+
+    .passo h3{
+      margin-top:16px;
+      font-size:16px;
+    }
+
+    .passo p{
+      margin-top:7px;
+
+      font-size:12px;
+
+      line-height:1.5;
+
+      color:var(--texto-suave);
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-container{
+      max-width:1200px;
+
+      margin:auto;
+
+      border-radius:25px;
+
+      padding:50px;
+
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(255,255,255,.14),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          var(--azul),
+          var(--azul-escuro)
+        );
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:30px;
+
+      box-shadow:
+        0 25px 55px rgba(8,59,143,.22);
+    }
+
+    .cta-container h2{
+      font-size:31px;
+    }
+
+    .cta-container p{
+      margin-top:8px;
+      opacity:.8;
+    }
+
+    .cta-btn{
+      white-space:nowrap;
+
+      background:var(--laranja);
+
+      padding:14px 21px;
+
+      border-radius:11px;
+
+      font-weight:900;
+
+      transition:.2s;
+    }
+
+    .cta-btn:hover{
+      background:white;
+      color:var(--azul);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      margin-top:80px;
+
+      background:#0d1828;
+
+      color:#c8d1dd;
+    }
+
+    .footer-container{
+      max-width:1200px;
+
+      margin:auto;
+
+      padding:50px 22px 30px;
+
+      display:grid;
+
+      grid-template-columns:
+        1.3fr
+        1fr
+        1fr;
+
+      gap:40px;
+    }
+
+    footer h3{
+      color:white;
+      margin-bottom:14px;
+    }
+
+    footer p,
+    footer a{
+      font-size:13px;
+      line-height:1.8;
+      color:#aeb9c7;
+    }
+
+    footer a{
+      display:block;
+    }
+
+    footer a:hover{
+      color:var(--laranja);
+    }
+
+    .footer-final{
+      border-top:1px solid rgba(255,255,255,.08);
+
+      max-width:1200px;
+
+      margin:auto;
+
+      padding:20px 22px;
+
+      font-size:12px;
+
+      color:#7f8da1;
+
+      text-align:center;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp{
+      position:fixed;
+
+      right:20px;
+      bottom:20px;
+
+      width:57px;
+      height:57px;
+
+      border-radius:50%;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:white;
+
+      background:#25d366;
+
+      font-size:28px;
+
+      box-shadow:
+        0 9px 25px rgba(37,211,102,.36);
+
+      z-index:999;
+
+      transition:.25s;
+    }
+
+    .whatsapp:hover{
+      transform:
+        translateY(-3px)
+        scale(1.04);
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width:900px){
+
+      nav{
+        display:none;
+
+        position:absolute;
+
+        left:15px;
+        right:15px;
+        top:74px;
+
+        background:white;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        padding:16px;
+
+        border-radius:14px;
+
+        box-shadow:var(--sombra);
+
+        border:1px solid var(--borda);
+      }
+
+      nav.ativo{
+        display:flex;
+      }
+
+      nav a{
+        padding:11px;
+      }
+
+      .menu-mobile{
+        display:block;
+      }
+
+      .hero-container{
+        grid-template-columns:1fr;
+
+        padding-top:50px;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+
+      .hero-badge{
+        margin:
+          0 auto
+          18px;
+      }
+
+      .hero h1{
+        margin:auto;
+        font-size:46px;
+      }
+
+      .hero p{
+        margin:
+          18px auto
+          0;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      .hero-beneficios{
+        justify-content:center;
+      }
+
+      .hero-card{
+        max-width:520px;
+        width:100%;
+        margin:auto;
+      }
+
+      .beneficios-container{
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .brinquedos-grid{
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .passos-grid{
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .cta-container{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .footer-container{
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .header-container{
+        padding:11px 15px;
+      }
+
+      .logo-text strong{
+        font-size:16px;
+      }
+
+      .logo-text span{
+        font-size:10px;
+      }
+
+      .logo-icon{
+        width:41px;
+        height:41px;
+      }
+
+      .hero-container{
+        min-height:auto;
+
+        padding:
+          45px 18px
+          50px;
+
+        gap:38px;
+      }
+
+      .hero h1{
+        font-size:37px;
+
+        letter-spacing:-1.4px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+      }
+
+      .btn-principal,
+      .btn-secundario{
+        width:100%;
+      }
+
+      .hero-beneficios{
+        align-items:flex-start;
+        flex-direction:column;
+
+        width:max-content;
+
+        margin:
+          27px auto
+          0;
+      }
+
+      .hero-card{
+        min-height:390px;
+
+        border-radius:22px;
+      }
+
+      .brinquedo-ilustracao{
+        width:185px;
+        height:185px;
+      }
+
+      .brinquedo-ilustracao i{
+        font-size:82px;
+      }
+
+      .beneficios-container{
+        grid-template-columns:1fr;
+
+        gap:16px;
+      }
+
+      .section{
+        padding:65px 17px;
+      }
+
+      .section-header{
+        margin-bottom:30px;
+      }
+
+      .section-header h2{
+        font-size:29px;
+      }
+
+      .brinquedos-grid{
+        grid-template-columns:1fr;
+      }
+
+      .produto-img{
+        height:200px;
+      }
+
+      .passos-grid{
+        grid-template-columns:1fr;
+      }
+
+      .cta-container{
+        padding:35px 20px;
+
+        border-radius:19px;
+      }
+
+      .cta-container h2{
+        font-size:25px;
+      }
+
+      .cta-btn{
+        width:100%;
+        text-align:center;
+      }
+
+      .footer-container{
+        grid-template-columns:1fr;
+
+        padding-top:40px;
+      }
+
+      footer{
+        margin-top:50px;
+      }
+
+      .whatsapp{
+        right:15px;
+        bottom:15px;
+
+        width:53px;
+        height:53px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-container">
+
+    <a href="index.html" class="logo">
+
+      <div class="logo-icon">
+        <i class="fa-solid fa-child-reaching"></i>
+      </div>
+
+      <div class="logo-text">
+        <strong>Encanto Kids</strong>
+        <span>Infláveis</span>
+      </div>
+
+    </a>
+
+
+    <nav id="menu">
+
+      <a href="#inicio">
+        Início
+      </a>
+
+      <a href="#brinquedos">
+        Brinquedos
+      </a>
+
+      <a href="#como-funciona">
+        Como funciona
+      </a>
+
+      <a href="#contato">
+        Contato
+      </a>
+
+      <a
+        href="brinquedos.html"
+        class="btn-header"
+      >
+        Fazer orçamento
+      </a>
+
+    </nav>
+
+
+    <button
+      class="menu-mobile"
+      onclick="abrirMenu()"
+      aria-label="Abrir menu"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section
+    class="hero"
+    id="inicio"
+  >
+
+    <div class="hero-container">
+
+      <div class="hero-text">
+
+        <div class="hero-badge">
+          <i class="fa-solid fa-star"></i>
+
+          Diversão garantida para sua festa
+        </div>
+
+
+        <h1>
+          Transformamos sua festa em um momento
+          <span>inesquecível.</span>
+        </h1>
+
+
+        <p>
+          Escolha seus brinquedos favoritos,
+          monte sua reserva online e deixe a diversão
+          por conta da Encanto Kids Infláveis.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="brinquedos.html"
+            class="btn-principal"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Ver brinquedos
+          </a>
+
+
+          <a
+            href="#como-funciona"
+            class="btn-secundario"
+          >
+            <i class="fa-regular fa-circle-play"></i>
+
+            Como funciona
+          </a>
+
+        </div>
+
+
+        <div class="hero-beneficios">
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Reserva online
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Atendimento rápido
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-check"></i>
+            Brinquedos selecionados
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="hero-card-top">
+
+          <small>
+            Encanto Kids Infláveis
+          </small>
+
+          <h2>
+            A diversão que transforma sua festa!
+          </h2>
+
+        </div>
+
+
+        <div class="brinquedo-ilustracao">
+
+          <i class="fa-solid fa-cake-candles"></i>
+
+        </div>
+
+
+        <div class="hero-card-bottom">
+
+          <div>
+
+            <strong>
+              Faça seu orçamento online
+            </strong>
+
+            <span>
+              Rápido, simples e direto.
+            </span>
+
+          </div>
+
+          <i class="fa-solid fa-arrow-right"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BENEFÍCIOS -->
+
+  <section class="beneficios">
+
+    <div class="beneficios-container">
+
+      <div class="beneficio">
+
+        <div class="beneficio-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+
+        <div>
+          <strong>Reserva pelo celular</strong>
+          <span>Faça tudo online</span>
+        </div>
+
+      </div>
+
+
+      <div class="beneficio">
+
+        <div class="beneficio-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <div>
+          <strong>Escolha sua data</strong>
+          <span>Planeje sua festa</span>
+        </div>
+
+      </div>
+
+
+      <div class="beneficio">
+
+        <div class="beneficio-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <div>
+          <strong>Atendimento rápido</strong>
+          <span>Suporte pelo WhatsApp</span>
+        </div>
+
+      </div>
+
+
+      <div class="beneficio">
+
+        <div class="beneficio-icon">
+          <i class="fa-solid fa-shield-heart"></i>
+        </div>
+
+        <div>
+          <strong>Segurança e cuidado</strong>
+          <span>Diversão para sua família</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BRINQUEDOS -->
+
+  <section
+    class="section"
+    id="brinquedos"
+  >
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span>
+          Nossos brinquedos
+        </span>
+
+        <h2>
+          Escolha a diversão da sua festa
+        </h2>
+
+        <p>
+          Veja alguns dos nossos brinquedos e monte sua
+          reserva de forma simples.
+        </p>
+
+      </div>
+
+
+      <div class="brinquedos-grid">
+
+        <!-- PULA-PULA -->
+
+        <article class="produto-card">
+
+          <div class="produto-img">
+
+            <span class="produto-badge">
+              Popular
+            </span>
+
+            <i class="fa-solid fa-child-reaching"></i>
+
+          </div>
+
+
+          <div class="produto-content">
+
+            <h3>Pula-Pula</h3>
+
+            <p>
+              Diversão garantida para as crianças
+              aproveitarem cada momento da festa.
+            </p>
+
+
+            <div class="produto-footer">
+
+              <div class="produto-preco">
+
+                <small>
+                  A partir de
+                </small>
+
+                <strong>
+                  R$ 149,99
+                </strong>
+
+              </div>
+
+
+              <a
+                href="brinquedos.html"
+                class="produto-btn"
+              >
+                Reservar
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- TOBOGÃ -->
+
+        <article class="produto-card">
+
+          <div class="produto-img">
+
+            <span class="produto-badge">
+              Diversão
+            </span>
+
+            <i class="fa-solid fa-person-running"></i>
+
+          </div>
+
+
+          <div class="produto-content">
+
+            <h3>Tobogã Inflável</h3>
+
+            <p>
+              Uma opção cheia de emoção para deixar
+              sua festa ainda mais divertida.
+            </p>
+
+
+            <div class="produto-footer">
+
+              <div class="produto-preco">
+
+                <small>
+                  A partir de
+                </small>
+
+                <strong>
+                  R$ 149,99
+                </strong>
+
+              </div>
+
+
+              <a
+                href="brinquedos.html"
+                class="produto-btn"
+              >
+                Reservar
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PISCINA -->
+
+        <article class="produto-card">
+
+          <div class="produto-img">
+
+            <span class="produto-badge">
+              Criançada
+            </span>
+
+            <i class="fa-solid fa-cubes-stacked"></i>
+
+          </div>
+
+
+          <div class="produto-content">
+
+            <h3>
+              Castelo com Piscina de Bolinhas
+            </h3>
+
+            <p>
+              Um espaço colorido e divertido para os
+              pequenos brincarem à vontade.
+            </p>
+
+
+            <div class="produto-footer">
+
+              <div class="produto-preco">
+
+                <small>
+                  A partir de
+                </small>
+
+                <strong>
+                  R$ 149,99
+                </strong>
+
+              </div>
+
+
+              <a
+                href="brinquedos.html"
+                class="produto-btn"
+              >
+                Reservar
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMO FUNCIONA -->
+
+  <section
+    class="section como-funciona"
+    id="como-funciona"
+  >
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span>
+          Simples e rápido
+        </span>
+
+        <h2>
+          Como fazer sua reserva
+        </h2>
+
+        <p>
+          Você escolhe seus brinquedos e nós cuidamos
+          do restante.
+        </p>
+
+      </div>
+
+
+      <div class="passos-grid">
+
+        <div class="passo">
+
+          <div class="passo-numero">
+            1
+          </div>
+
+          <h3>
+            Escolha
+          </h3>
+
+          <p>
+            Veja nosso catálogo e escolha os brinquedos
+            para sua festa.
+          </p>
+
+        </div>
+
+
+        <div class="passo">
+
+          <div class="passo-numero">
+            2
+          </div>
+
+          <h3>
+            Monte sua reserva
+          </h3>
+
+          <p>
+            Adicione um ou mais brinquedos ao seu
+            carrinho de reserva.
+          </p>
+
+        </div>
+
+
+        <div class="passo">
+
+          <div class="passo-numero">
+            3
+          </div>
+
+          <h3>
+            Informe seus dados
+          </h3>
+
+          <p>
+            Digite seu endereço, telefone, cidade e
+            data da festa.
+          </p>
+
+        </div>
+
+
+        <div class="passo">
+
+          <div class="passo-numero">
+            4
+          </div>
+
+          <h3>
+            Confirme
+          </h3>
+
+          <p>
+            Revise seu orçamento e envie sua solicitação
+            para nossa equipe.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="section">
+
+    <div class="cta-container">
+
+      <div>
+
+        <h2>
+          Sua festa merece mais diversão 🎉
+        </h2>
+
+        <p>
+          Monte agora seu orçamento com a Encanto Kids.
+        </p>
+
+      </div>
+
+
+      <a
+        href="brinquedos.html"
+        class="cta-btn"
+      >
+        Escolher brinquedos
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer id="contato">
+
+  <div class="footer-container">
+
+    <div>
+
+      <h3>
+        Encanto Kids Infláveis
+      </h3>
+
+      <p>
+        A diversão que transforma sua festa!
+      </p>
+
+      <p>
+        Casa Branca - SP e região.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Navegação
+      </h3>
+
+      <a href="#inicio">
+        Início
+      </a>
+
+      <a href="#brinquedos">
+        Brinquedos
+      </a>
+
+      <a href="#como-funciona">
+        Como funciona
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Atendimento
+      </h3>
+
+      <p>
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
+      </p>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Casa Branca - SP
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-final">
+
+    © 2026 Encanto Kids Infláveis.
+    Todos os direitos reservados.
+
+  </div>
+
+</footer>
+
+
+<!-- TROCAR PELO NÚMERO REAL -->
+
+<a
+  href="https://wa.me/5519999999999"
+  target="_blank"
+  class="whatsapp"
+  aria-label="WhatsApp"
+>
+
+  <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+
+  function abrirMenu(){
+
+    const menu =
+      document.getElementById("menu");
+
+    menu.classList.toggle("ativo");
+
+  }
+
+
+  document
+    .querySelectorAll("#menu a")
+    .forEach(link => {
+
+      link.addEventListener(
+        "click",
+        () => {
+
+          document
+            .getElementById("menu")
+            .classList
+            .remove("ativo");
+
+        }
+      );
+
+    });
+
+</script>
+
+</body>
+</html>
