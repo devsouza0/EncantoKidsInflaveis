@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Solicitação Recebida | Encanto Kids Infláveis</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    :root{
+      --azul:#0b5ed7;
+      --azul-escuro:#083b8f;
+      --azul-claro:#eaf3ff;
+
+      --laranja:#ff7a00;
+      --laranja-escuro:#e56800;
+
+      --verde:#16a34a;
+
+      --fundo:#f6f8fb;
+      --branco:#ffffff;
+
+      --texto:#172033;
+      --texto-suave:#667085;
+
+      --borda:#e4e8ef;
+
+      --sombra:
+        0 16px 45px rgba(15,35,60,.10);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+
+      font-family:Arial, Helvetica, sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(255,122,0,.12),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(11,94,215,.12),
+          transparent 28%
+        ),
+        var(--fundo);
+
+      color:var(--texto);
+
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      background:rgba(255,255,255,.96);
+
+      border-bottom:1px solid var(--borda);
+
+      backdrop-filter:blur(12px);
+    }
+
+    .header-container{
+      max-width:1100px;
+
+      margin:auto;
+
+      padding:13px 20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo-icon{
+      width:44px;
+      height:44px;
+
+      border-radius:13px;
+
+      background:linear-gradient(
+        135deg,
+        var(--azul),
+        #438cff
+      );
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:20px;
+
+      box-shadow:
+        0 8px 20px rgba(11,94,215,.24);
+    }
+
+    .logo-text strong{
+      display:block;
+
+      color:var(--azul-escuro);
+
+      font-size:18px;
+    }
+
+    .logo-text span{
+      display:block;
+
+      color:var(--texto-suave);
+
+      font-size:11px;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main{
+      padding:55px 20px 90px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+    }
+
+    /* =========================
+       SUCESSO
+    ========================= */
+
+    .sucesso{
+      text-align:center;
+
+      margin-bottom:28px;
+    }
+
+    .sucesso-icon{
+      width:90px;
+      height:90px;
+
+      margin:
+        0 auto
+        20px;
+
+      border-radius:50%;
+
+      background:#dcfce7;
+
+      color:var(--verde);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:42px;
+
+      box-shadow:
+        0 10px 28px rgba(22,163,74,.15);
+    }
+
+    .sucesso-badge{
+      width:max-content;
+
+      max-width:100%;
+
+      margin:
+        0 auto
+        12px;
+
+      padding:7px 12px;
+
+      border-radius:999px;
+
+      background:#eaf3ff;
+
+      color:var(--azul);
+
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .sucesso h1{
+      color:#142c4b;
+
+      font-size:36px;
+
+      letter-spacing:-1px;
+    }
+
+    .sucesso p{
+      max-width:630px;
+
+      margin:
+        11px auto
+        0;
+
+      color:var(--texto-suave);
+
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    /* =========================
+       CARD
+    ========================= */
+
+    .card{
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:20px;
+
+      box-shadow:var(--sombra);
+
+      overflow:hidden;
+    }
+
+    .card-topo{
+      padding:22px;
+
+      border-bottom:1px solid var(--borda);
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+
+      background:#fbfcfe;
+    }
+
+    .card-topo h2{
+      color:#1d314d;
+
+      font-size:19px;
+    }
+
+    .codigo-box{
+      text-align:right;
+    }
+
+    .codigo-box span{
+      display:block;
+
+      color:var(--texto-suave);
+
+      font-size:10px;
+    }
+
+    .codigo-box strong{
+      display:block;
+
+      margin-top:3px;
+
+      color:var(--laranja);
+
+      font-size:17px;
+
+      letter-spacing:.5px;
+    }
+
+    .card-content{
+      padding:22px;
+    }
+
+    /* =========================
+       CLIENTE
+    ========================= */
+
+    .bloco{
+      margin-bottom:25px;
+    }
+
+    .bloco:last-child{
+      margin-bottom:0;
+    }
+
+    .titulo-bloco{
+      margin-bottom:13px;
+
+      display:flex;
+      align-items:center;
+
+      gap:8px;
+
+      font-size:13px;
+      font-weight:900;
+
+      color:#1d314d;
+    }
+
+    .titulo-bloco i{
+      color:var(--azul);
+    }
+
+    .dados-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap:11px;
+    }
+
+    .dado{
+      padding:12px;
+
+      border:1px solid #edf0f3;
+
+      background:#f8fafc;
+
+      border-radius:10px;
+    }
+
+    .dado span{
+      display:block;
+
+      color:#98a2b3;
+
+      font-size:10px;
+    }
+
+    .dado strong{
+      display:block;
+
+      margin-top:4px;
+
+      color:#344054;
+
+      font-size:12px;
+
+      word-break:break-word;
+    }
+
+    /* =========================
+       ITENS
+    ========================= */
+
+    .item{
+      padding:12px 0;
+
+      border-bottom:1px solid #edf0f3;
+
+      display:flex;
+
+      align-items:flex-start;
+      justify-content:space-between;
+
+      gap:15px;
+    }
+
+    .item:last-child{
+      border-bottom:0;
+    }
+
+    .item-info strong{
+      display:block;
+
+      color:#344054;
+
+      font-size:13px;
+    }
+
+    .item-info span{
+      display:block;
+
+      margin-top:4px;
+
+      color:var(--texto-suave);
+
+      font-size:11px;
+    }
+
+    .item-preco{
+      text-align:right;
+
+      color:var(--azul-escuro);
+
+      font-size:13px;
+
+      font-weight:900;
+
+      white-space:nowrap;
+    }
+
+    /* =========================
+       TOTAL
+    ========================= */
+
+    .total-box{
+      margin-top:18px;
+
+      padding:17px;
+
+      border-radius:13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #eef6ff,
+          #fff6ed
+        );
+
+      border:1px solid #dce8f8;
+
+      display:flex;
+
+      align-items:flex-end;
+      justify-content:space-between;
+
+      gap:15px;
+    }
+
+    .total-box span{
+      color:var(--texto-suave);
+
+      font-size:12px;
+    }
+
+    .total-box strong{
+      color:var(--azul-escuro);
+
+      font-size:26px;
+    }
+
+    /* =========================
+       AVISO
+    ========================= */
+
+    .aviso{
+      margin-top:20px;
+
+      padding:14px;
+
+      border-radius:11px;
+
+      background:#fff8ed;
+
+      border:1px solid #fed7aa;
+
+      color:#9a4c00;
+
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .aviso i{
+      margin-right:5px;
+    }
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .acoes{
+      margin-top:22px;
+
+      display:grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:11px;
+    }
+
+    .btn{
+      min-height:49px;
+
+      border-radius:11px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:8px;
+
+      padding:0 15px;
+
+      font-size:13px;
+      font-weight:900;
+
+      transition:.2s;
+    }
+
+    .btn-whatsapp{
+      background:#25d366;
+
+      color:white;
+
+      box-shadow:
+        0 8px 20px rgba(37,211,102,.24);
+    }
+
+    .btn-whatsapp:hover{
+      background:#1fbd5b;
+
+      transform:translateY(-2px);
+    }
+
+    .btn-inicio{
+      background:var(--azul);
+
+      color:white;
+
+      box-shadow:
+        0 8px 20px rgba(11,94,215,.22);
+    }
+
+    .btn-inicio:hover{
+      background:var(--azul-escuro);
+
+      transform:translateY(-2px);
+    }
+
+    /* =========================
+       ERRO
+    ========================= */
+
+    .sem-reserva{
+      display:none;
+
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:20px;
+
+      box-shadow:var(--sombra);
+
+      padding:55px 20px;
+
+      text-align:center;
+    }
+
+    .sem-reserva i{
+      color:#cbd5e1;
+
+      font-size:50px;
+    }
+
+    .sem-reserva h2{
+      margin-top:16px;
+
+      color:#1d314d;
+    }
+
+    .sem-reserva p{
+      margin:
+        8px auto
+        20px;
+
+      max-width:430px;
+
+      color:var(--texto-suave);
+
+      font-size:13px;
+
+      line-height:1.6;
+    }
+
+    .sem-reserva a{
+      display:inline-flex;
+
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      min-height:45px;
+
+      padding:0 18px;
+
+      border-radius:10px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      font-size:13px;
+
+      font-weight:900;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width:650px){
+
+      .header-container{
+        padding:11px 14px;
+      }
+
+      .logo-icon{
+        width:40px;
+        height:40px;
+      }
+
+      .logo-text strong{
+        font-size:15px;
+      }
+
+      .logo-text span{
+        font-size:9px;
+      }
+
+      main{
+        padding:
+          38px
+          14px
+          65px;
+      }
+
+      .sucesso-icon{
+        width:78px;
+        height:78px;
+
+        font-size:36px;
+      }
+
+      .sucesso h1{
+        font-size:29px;
+      }
+
+      .sucesso p{
+        font-size:13px;
+      }
+
+      .card-topo{
+        align-items:flex-start;
+
+        flex-direction:column;
+      }
+
+      .codigo-box{
+        text-align:left;
+      }
+
+      .card-content{
+        padding:17px;
+      }
+
+      .dados-grid{
+        grid-template-columns:1fr;
+      }
+
+      .acoes{
+        grid-template-columns:1fr;
+      }
+
+      .total-box strong{
+        font-size:23px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-container">
+
+    <a href="index.html" class="logo">
+
+      <div class="logo-icon">
+        <i class="fa-solid fa-child-reaching"></i>
+      </div>
+
+      <div class="logo-text">
+        <strong>Encanto Kids</strong>
+        <span>Infláveis</span>
+      </div>
+
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <div class="container">
+
+
+    <div id="conteudoReserva">
+
+
+      <section class="sucesso">
+
+        <div class="sucesso-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="sucesso-badge">
+          SOLICITAÇÃO ENVIADA
+        </div>
+
+        <h1>
+          Recebemos sua solicitação 🎉
+        </h1>
+
+        <p>
+          Seus dados foram registrados nesta etapa.
+          Confira abaixo o resumo da sua solicitação.
+          Em breve a Encanto Kids poderá confirmar a disponibilidade da data.
+        </p>
+
+      </section>
+
+
+      <div class="card">
+
+        <div class="card-topo">
+
+          <h2>
+            Resumo da solicitação
+          </h2>
+
+          <div class="codigo-box">
+
+            <span>
+              Número do orçamento
+            </span>
+
+            <strong id="codigoReserva">
+              EK-000000
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="card-content">
+
+
+          <!-- CLIENTE -->
+
+          <div class="bloco">
+
+            <div class="titulo-bloco">
+
+              <i class="fa-solid fa-user"></i>
+
+              Dados do cliente
+
+            </div>
+
+
+            <div class="dados-grid">
+
+              <div class="dado">
+
+                <span>Nome</span>
+
+                <strong id="nomeCliente">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="dado">
+
+                <span>WhatsApp</span>
+
+                <strong id="telefoneCliente">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="dado">
+
+                <span>Cidade</span>
+
+                <strong id="cidadeCliente">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="dado">
+
+                <span>Endereço</span>
+
+                <strong id="enderecoCliente">
+                  -
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FESTA -->
+
+          <div class="bloco">
+
+            <div class="titulo-bloco">
+
+              <i class="fa-solid fa-calendar-days"></i>
+
+              Informações da festa
+
+            </div>
+
+
+            <div class="dados-grid">
+
+              <div class="dado">
+
+                <span>Data da festa</span>
+
+                <strong id="dataFesta">
+                  -
+                </strong>
+
+              </div>
+
+
+              <div class="dado">
+
+                <span>Horário aproximado</span>
+
+                <strong id="horarioFesta">
+                  Não informado
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- BRINQUEDOS -->
+
+          <div class="bloco">
+
+            <div class="titulo-bloco">
+
+              <i class="fa-solid fa-cart-shopping"></i>
+
+              Brinquedos escolhidos
+
+            </div>
+
+
+            <div id="listaItens">
+            </div>
+
+
+            <div class="total-box">
+
+              <span>
+                Total estimado
+              </span>
+
+              <strong id="totalReserva">
+                R$ 0,00
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <!-- OBSERVAÇÕES -->
+
+          <div
+            class="bloco"
+            id="blocoObservacoes"
+            style="display:none;"
+          >
+
+            <div class="titulo-bloco">
+
+              <i class="fa-solid fa-message"></i>
+
+              Observações
+
+            </div>
+
+
+            <div class="dado">
+
+              <strong id="observacoes">
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="aviso">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            Esta página representa uma solicitação de orçamento/reserva.
+            A locação será confirmada somente após a Encanto Kids verificar
+            a disponibilidade dos brinquedos e da data escolhida.
+
+          </div>
+
+
+          <div class="acoes">
+
+            <a
+              href="#"
+              id="btnWhatsapp"
+              target="_blank"
+              class="btn btn-whatsapp"
+            >
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+              Enviar pelo WhatsApp
+
+            </a>
+
+
+            <a
+              href="index.html"
+              class="btn btn-inicio"
+              onclick="finalizarFluxo()"
+            >
+
+              <i class="fa-solid fa-house"></i>
+
+              Voltar para o início
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SEM RESERVA -->
+
+    <div
+      class="sem-reserva"
+      id="semReserva"
+    >
+
+      <i class="fa-solid fa-file-circle-xmark"></i>
+
+      <h2>
+        Nenhuma solicitação encontrada
+      </h2>
+
+      <p>
+        Não encontramos uma reserva recente neste navegador.
+        Volte ao catálogo para montar uma nova solicitação.
+      </p>
+
+      <a href="brinquedos.html">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Ver brinquedos
+
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<script>
+
+  const CHAVE_RESERVA =
+    "encantoKidsUltimaReserva";
+
+
+  const CHAVE_CARRINHO =
+    "encantoKidsCarrinho";
+
+
+  function formatarDinheiro(
+    valor
+  ){
+
+    return Number(
+      valor || 0
+    ).toLocaleString(
+      "pt-BR",
+      {
+        style:"currency",
+        currency:"BRL"
+      }
+    );
+
+  }
+
+
+  function formatarData(
+    data
+  ){
+
+    if(!data){
+
+      return "-";
+
+    }
+
+
+    const partes =
+      data.split("-");
+
+
+    if(partes.length !== 3){
+
+      return data;
+
+    }
+
+
+    return
+      partes[2] +
+      "/" +
+      partes[1] +
+      "/" +
+      partes[0];
+
+  }
+
+
+  function criarCodigo(){
+
+    const agora =
+      new Date();
+
+
+    const ano =
+      agora
+        .getFullYear()
+        .toString()
+        .slice(-2);
+
+
+    const mes =
+      String(
+        agora.getMonth() + 1
+      ).padStart(
+        2,
+        "0"
+      );
+
+
+    const dia =
+      String(
+        agora.getDate()
+      ).padStart(
+        2,
+        "0"
+      );
+
+
+    const numero =
+      Math.floor(
+        1000 +
+        Math.random() *
+        9000
+      );
+
+
+    return `EK-${ano}${mes}${dia}-${numero}`;
+
+  }
+
+
+  function carregarReserva(){
+
+    let reserva;
+
+
+    try{
+
+      reserva =
+        JSON.parse(
+          localStorage.getItem(
+            CHAVE_RESERVA
+          )
+        );
+
+    }catch{
+
+      reserva = null;
+
+    }
+
+
+    if(
+      !reserva ||
+      !reserva.itens ||
+      reserva.itens.length === 0
+    ){
+
+      document
+        .getElementById(
+          "conteudoReserva"
+        )
+        .style
+        .display =
+        "none";
+
+
+      document
+        .getElementById(
+          "semReserva"
+        )
+        .style
+        .display =
+        "block";
+
+
+      return;
+
+    }
+
+
+    let codigo =
+      reserva.codigo;
+
+
+    if(!codigo){
+
+      codigo =
+        criarCodigo();
+
+
+      reserva.codigo =
+        codigo;
+
+
+      localStorage.setItem(
+        CHAVE_RESERVA,
+        JSON.stringify(
+          reserva
+        )
+      );
+
+    }
+
+
+    document
+      .getElementById(
+        "codigoReserva"
+      )
+      .textContent =
+      codigo;
+
+
+    document
+      .getElementById(
+        "nomeCliente"
+      )
+      .textContent =
+      reserva.nome ||
+      "-";
+
+
+    document
+      .getElementById(
+        "telefoneCliente"
+      )
+      .textContent =
+      reserva.telefone ||
+      "-";
+
+
+    document
+      .getElementById(
+        "cidadeCliente"
+      )
+      .textContent =
+      reserva.cidade ||
+      "-";
+
+
+    document
+      .getElementById(
+        "enderecoCliente"
+      )
+      .textContent =
+      reserva.endereco ||
+      "-";
+
+
+    document
+      .getElementById(
+        "dataFesta"
+      )
+      .textContent =
+      formatarData(
+        reserva.dataFesta
+      );
+
+
+    document
+      .getElementById(
+        "horarioFesta"
+      )
+      .textContent =
+      reserva.horario ||
+      "Não informado";
+
+
+    const lista =
+      document.getElementById(
+        "listaItens"
+      );
+
+
+    lista.innerHTML =
+      "";
+
+
+    reserva.itens.forEach(
+      item => {
+
+        const quantidade =
+          item.quantidade ||
+          1;
+
+
+        const totalItem =
+          Number(
+            item.preco
+          ) *
+          quantidade;
+
+
+        const elemento =
+          document.createElement(
+            "div"
+          );
+
+
+        elemento.className =
+          "item";
+
+
+        elemento.innerHTML = `
+
+          <div class="item-info">
+
+            <strong>
+              ${item.nome}
+            </strong>
+
+            <span>
+              Quantidade: ${quantidade}
+            </span>
+
+          </div>
+
+
+          <div class="item-preco">
+
+            ${formatarDinheiro(
+              totalItem
+            )}
+
+          </div>
+
+        `;
+
+
+        lista.appendChild(
+          elemento
+        );
+
+      }
+    );
+
+
+    document
+      .getElementById(
+        "totalReserva"
+      )
+      .textContent =
+      formatarDinheiro(
+        reserva.total
+      );
+
+
+    if(
+      reserva.observacoes &&
+      reserva.observacoes.trim()
+    ){
+
+      document
+        .getElementById(
+          "blocoObservacoes"
+        )
+        .style
+        .display =
+        "block";
+
+
+      document
+        .getElementById(
+          "observacoes"
+        )
+        .textContent =
+        reserva.observacoes;
+
+    }
+
+
+    montarWhatsapp(
+      reserva,
+      codigo
+    );
+
+  }
+
+
+  function montarWhatsapp(
+    reserva,
+    codigo
+  ){
+
+    let texto =
+      `Olá! Fiz uma solicitação pelo site da Encanto Kids.%0A%0A`;
+
+
+    texto +=
+      `*Orçamento:* ${codigo}%0A`;
+
+
+    texto +=
+      `*Cliente:* ${reserva.nome}%0A`;
+
+
+    texto +=
+      `*WhatsApp:* ${reserva.telefone}%0A`;
+
+
+    texto +=
+      `*Cidade:* ${reserva.cidade}%0A`;
+
+
+    texto +=
+      `*Data da festa:* ${formatarData(reserva.dataFesta)}%0A`;
+
+
+    if(reserva.horario){
+
+      texto +=
+        `*Horário:* ${reserva.horario}%0A`;
+
+    }
+
+
+    texto +=
+      `%0A*Brinquedos:*%0A`;
+
+
+    reserva.itens.forEach(
+      item => {
+
+        texto +=
+          `- ${item.nome} x${item.quantidade || 1}%0A`;
+
+      }
+    );
+
+
+    texto +=
+      `%0A*Total estimado:* ${formatarDinheiro(reserva.total)}`;
+
+
+    /*
+      TROQUE O NÚMERO ABAIXO
+      PELO WHATSAPP REAL DA EMPRESA.
+
+      Exemplo:
+      5519999999999
+    */
+
+    const numeroWhatsapp =
+      "551998522612";
+
+
+    document
+      .getElementById(
+        "btnWhatsapp"
+      )
+      .href =
+      `https://wa.me/${numeroWhatsapp}?text=${texto}`;
+
+  }
+
+
+  function finalizarFluxo(){
+
+    localStorage.removeItem(
+      CHAVE_CARRINHO
+    );
+
+  }
+
+
+  carregarReserva();
+
+</script>
+
+</body>
+</html>
