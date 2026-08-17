@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brinquedos | Encanto Kids Infláveis</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    :root{
+      --azul:#0b5ed7;
+      --azul-escuro:#083b8f;
+      --azul-claro:#eaf3ff;
+
+      --laranja:#ff7a00;
+      --laranja-escuro:#e56800;
+
+      --verde:#16a34a;
+      --vermelho:#dc2626;
+
+      --fundo:#f6f8fb;
+      --branco:#ffffff;
+
+      --texto:#172033;
+      --texto-suave:#667085;
+
+      --borda:#e4e8ef;
+
+      --sombra:
+        0 12px 35px rgba(15,35,60,.09);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--fundo);
+      color:var(--texto);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    button{
+      font:inherit;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,255,255,.96);
+
+      backdrop-filter:blur(12px);
+
+      border-bottom:1px solid var(--borda);
+    }
+
+    .header-container{
+      max-width:1200px;
+      margin:auto;
+
+      padding:13px 20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo-icon{
+      width:44px;
+      height:44px;
+
+      border-radius:13px;
+
+      background:linear-gradient(
+        135deg,
+        var(--azul),
+        #438cff
+      );
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:20px;
+
+      box-shadow:
+        0 8px 20px rgba(11,94,215,.24);
+    }
+
+    .logo-text strong{
+      display:block;
+
+      color:var(--azul-escuro);
+
+      font-size:18px;
+    }
+
+    .logo-text span{
+      display:block;
+
+      font-size:11px;
+
+      color:var(--texto-suave);
+    }
+
+    .header-acoes{
+      display:flex;
+      align-items:center;
+
+      gap:12px;
+    }
+
+    .btn-voltar{
+      min-height:42px;
+
+      padding:0 15px;
+
+      border-radius:10px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      background:#f1f4f8;
+
+      color:#344054;
+
+      font-size:13px;
+      font-weight:800;
+
+      transition:.2s;
+    }
+
+    .btn-voltar:hover{
+      background:#e8edf4;
+    }
+
+    .carrinho-btn{
+      position:relative;
+
+      min-height:42px;
+
+      padding:0 16px;
+
+      border-radius:10px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:8px;
+
+      font-size:13px;
+      font-weight:900;
+
+      box-shadow:
+        0 7px 17px rgba(255,122,0,.22);
+
+      transition:.2s;
+    }
+
+    .carrinho-btn:hover{
+      background:var(--laranja-escuro);
+      transform:translateY(-2px);
+    }
+
+    .contador{
+      min-width:21px;
+      height:21px;
+
+      padding:0 5px;
+
+      border-radius:999px;
+
+      background:white;
+
+      color:var(--laranja);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:11px;
+      font-weight:900;
+    }
+
+    /* =========================
+       TOPO
+    ========================= */
+
+    .topo{
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255,122,0,.15),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #eef6ff
+        );
+
+      border-bottom:1px solid var(--borda);
+    }
+
+    .topo-container{
+      max-width:1200px;
+      margin:auto;
+
+      padding:55px 20px;
+    }
+
+    .topo-badge{
+      width:max-content;
+
+      max-width:100%;
+
+      background:#fff0e1;
+
+      color:#c55b00;
+
+      border:1px solid #ffd5ad;
+
+      padding:7px 12px;
+
+      border-radius:999px;
+
+      font-size:12px;
+      font-weight:900;
+
+      margin-bottom:14px;
+    }
+
+    .topo h1{
+      max-width:720px;
+
+      color:#122742;
+
+      font-size:43px;
+
+      letter-spacing:-1.4px;
+    }
+
+    .topo p{
+      max-width:650px;
+
+      margin-top:13px;
+
+      color:var(--texto-suave);
+
+      font-size:16px;
+      line-height:1.65;
+    }
+
+    /* =========================
+       BARRA DE FILTRO
+    ========================= */
+
+    .filtro-section{
+      padding:25px 20px 0;
+    }
+
+    .filtro-container{
+      max-width:1200px;
+      margin:auto;
+
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:17px;
+
+      padding:16px;
+
+      box-shadow:
+        0 7px 22px rgba(13,37,72,.05);
+
+      display:flex;
+      align-items:center;
+
+      gap:12px;
+    }
+
+    .busca-box{
+      position:relative;
+
+      flex:1;
+    }
+
+    .busca-box i{
+      position:absolute;
+
+      left:14px;
+      top:50%;
+
+      transform:translateY(-50%);
+
+      color:#98a2b3;
+    }
+
+    .busca-box input{
+      width:100%;
+
+      min-height:45px;
+
+      border:1px solid var(--borda);
+
+      border-radius:10px;
+
+      outline:none;
+
+      padding:
+        0 14px
+        0 41px;
+
+      color:var(--texto);
+
+      background:#fbfcfe;
+    }
+
+    .busca-box input:focus{
+      border-color:#8bb5f4;
+
+      box-shadow:
+        0 0 0 3px rgba(11,94,215,.08);
+    }
+
+    .resultado-info{
+      color:var(--texto-suave);
+
+      font-size:12px;
+      font-weight:700;
+
+      white-space:nowrap;
+    }
+
+    /* =========================
+       PRODUTOS
+    ========================= */
+
+    .produtos-section{
+      padding:27px 20px 90px;
+    }
+
+    .produtos-container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .produtos-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:23px;
+    }
+
+    .produto-card{
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:19px;
+
+      overflow:hidden;
+
+      box-shadow:
+        0 10px 30px rgba(13,37,72,.06);
+
+      transition:.27s;
+    }
+
+    .produto-card:hover{
+      transform:translateY(-6px);
+
+      box-shadow:
+        0 18px 42px rgba(13,37,72,.11);
+    }
+
+    .produto-img{
+      height:230px;
+
+      position:relative;
+
+      overflow:hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          #eaf3ff,
+          #fff3e6
+        );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .produto-img img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+    }
+
+    .imagem-placeholder{
+      width:100%;
+      height:100%;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .imagem-placeholder i{
+      font-size:80px;
+      color:var(--azul);
+    }
+
+    .badge{
+      position:absolute;
+
+      left:13px;
+      top:13px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      padding:6px 10px;
+
+      border-radius:8px;
+
+      font-size:10px;
+      font-weight:900;
+
+      box-shadow:
+        0 5px 15px rgba(0,0,0,.12);
+    }
+
+    .disponivel{
+      position:absolute;
+
+      right:13px;
+      top:13px;
+
+      padding:6px 9px;
+
+      border-radius:8px;
+
+      background:#dcfce7;
+
+      color:#15803d;
+
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .produto-content{
+      padding:20px;
+    }
+
+    .produto-content h2{
+      color:#1d314d;
+
+      font-size:20px;
+    }
+
+    .produto-descricao{
+      margin-top:8px;
+
+      min-height:43px;
+
+      color:var(--texto-suave);
+
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .produto-info{
+      margin-top:16px;
+
+      display:grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:9px;
+    }
+
+    .info-item{
+      padding:10px;
+
+      background:#f8fafc;
+
+      border:1px solid #edf0f3;
+
+      border-radius:9px;
+
+      font-size:11px;
+
+      color:#667085;
+    }
+
+    .info-item i{
+      margin-right:5px;
+
+      color:var(--azul);
+    }
+
+    .produto-footer{
+      margin-top:18px;
+
+      padding-top:16px;
+
+      border-top:1px solid #edf0f3;
+    }
+
+    .produto-preco small{
+      display:block;
+
+      color:var(--texto-suave);
+
+      font-size:11px;
+    }
+
+    .produto-preco strong{
+      display:block;
+
+      margin-top:2px;
+
+      color:var(--azul-escuro);
+
+      font-size:24px;
+    }
+
+    .produto-preco span{
+      display:block;
+
+      margin-top:3px;
+
+      color:#98a2b3;
+
+      font-size:10px;
+    }
+
+    .produto-acoes{
+      margin-top:15px;
+
+      display:grid;
+
+      grid-template-columns:
+        1fr 46px;
+
+      gap:9px;
+    }
+
+    .btn-adicionar{
+      border:0;
+
+      min-height:45px;
+
+      border-radius:10px;
+
+      cursor:pointer;
+
+      background:var(--laranja);
+
+      color:white;
+
+      font-weight:900;
+
+      font-size:13px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      transition:.2s;
+    }
+
+    .btn-adicionar:hover{
+      background:var(--laranja-escuro);
+
+      transform:translateY(-2px);
+    }
+
+    .btn-info{
+      border:1px solid var(--borda);
+
+      border-radius:10px;
+
+      background:#f8fafc;
+
+      cursor:pointer;
+
+      color:var(--azul);
+
+      font-size:15px;
+
+      transition:.2s;
+    }
+
+    .btn-info:hover{
+      background:var(--azul-claro);
+    }
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    .toast{
+      position:fixed;
+
+      left:50%;
+      bottom:25px;
+
+      transform:
+        translateX(-50%)
+        translateY(120px);
+
+      opacity:0;
+
+      min-width:260px;
+
+      max-width:90%;
+
+      background:#152238;
+
+      color:white;
+
+      padding:13px 16px;
+
+      border-radius:11px;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,.24);
+
+      z-index:5000;
+
+      font-size:13px;
+      font-weight:700;
+
+      display:flex;
+      align-items:center;
+
+      gap:9px;
+
+      transition:.3s;
+    }
+
+    .toast.mostrar{
+      opacity:1;
+
+      transform:
+        translateX(-50%)
+        translateY(0);
+    }
+
+    .toast i{
+      color:#4ade80;
+    }
+
+    /* =========================
+       CARRINHO FLUTUANTE MOBILE
+    ========================= */
+
+    .carrinho-mobile{
+      display:none;
+    }
+
+    /* =========================
+       VAZIO
+    ========================= */
+
+    .nenhum{
+      display:none;
+
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:18px;
+
+      padding:50px 20px;
+
+      text-align:center;
+
+      color:var(--texto-suave);
+    }
+
+    .nenhum i{
+      font-size:50px;
+
+      color:#cbd5e1;
+
+      margin-bottom:15px;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width:900px){
+
+      .produtos-grid{
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .topo h1{
+        font-size:37px;
+      }
+
+    }
+
+    @media(max-width:650px){
+
+      .header-container{
+        padding:
+          11px
+          14px;
+      }
+
+      .logo-icon{
+        width:40px;
+        height:40px;
+      }
+
+      .logo-text strong{
+        font-size:15px;
+      }
+
+      .logo-text span{
+        font-size:9px;
+      }
+
+      .btn-voltar span{
+        display:none;
+      }
+
+      .carrinho-btn span.texto{
+        display:none;
+      }
+
+      .header-acoes{
+        gap:7px;
+      }
+
+      .topo-container{
+        padding:
+          40px
+          17px;
+      }
+
+      .topo h1{
+        font-size:33px;
+      }
+
+      .topo p{
+        font-size:14px;
+      }
+
+      .filtro-section{
+        padding:
+          17px
+          15px
+          0;
+      }
+
+      .filtro-container{
+        flex-direction:column;
+
+        align-items:stretch;
+      }
+
+      .resultado-info{
+        text-align:center;
+      }
+
+      .produtos-section{
+        padding:
+          20px
+          15px
+          95px;
+      }
+
+      .produtos-grid{
+        grid-template-columns:1fr;
+      }
+
+      .produto-card{
+        border-radius:16px;
+      }
+
+      .produto-img{
+        height:210px;
+      }
+
+      .produto-content{
+        padding:17px;
+      }
+
+      .produto-descricao{
+        min-height:auto;
+      }
+
+      .carrinho-mobile{
+        position:fixed;
+
+        display:flex;
+
+        left:15px;
+        right:15px;
+        bottom:15px;
+
+        min-height:55px;
+
+        border-radius:14px;
+
+        background:var(--azul);
+
+        color:white;
+
+        align-items:center;
+        justify-content:space-between;
+
+        padding:0 17px;
+
+        box-shadow:
+          0 12px 30px rgba(11,94,215,.30);
+
+        z-index:2000;
+
+        font-size:13px;
+        font-weight:900;
+      }
+
+      .carrinho-mobile strong{
+        display:flex;
+        align-items:center;
+
+        gap:7px;
+      }
+
+      .carrinho-mobile span{
+        background:white;
+
+        color:var(--azul);
+
+        padding:5px 9px;
+
+        border-radius:999px;
+
+        font-size:11px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-container">
+
+    <a
+      href="index.html"
+      class="logo"
+    >
+
+      <div class="logo-icon">
+        <i class="fa-solid fa-child-reaching"></i>
+      </div>
+
+      <div class="logo-text">
+        <strong>Encanto Kids</strong>
+        <span>Infláveis</span>
+      </div>
+
+    </a>
+
+
+    <div class="header-acoes">
+
+      <a
+        href="index.html"
+        class="btn-voltar"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+
+        <span>
+          Início
+        </span>
+      </a>
+
+
+      <a
+        href="carrinho.html"
+        class="carrinho-btn"
+      >
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span class="texto">
+          Minha Reserva
+        </span>
+
+        <span
+          class="contador"
+          id="contadorCarrinho"
+        >
+          0
+        </span>
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<section class="topo">
+
+  <div class="topo-container">
+
+    <div class="topo-badge">
+      <i class="fa-solid fa-star"></i>
+      Catálogo Encanto Kids
+    </div>
+
+    <h1>
+      Escolha os brinquedos para sua festa
+    </h1>
+
+    <p>
+      Adicione seus brinquedos favoritos à sua reserva.
+      Depois, informe a data e os dados da festa para
+      solicitar seu orçamento.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="filtro-section">
+
+  <div class="filtro-container">
+
+    <div class="busca-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="text"
+        id="campoBusca"
+        placeholder="Buscar brinquedo..."
+        oninput="filtrarBrinquedos()"
+      >
+
+    </div>
+
+
+    <div
+      class="resultado-info"
+      id="resultadoInfo"
+    >
+      3 brinquedos encontrados
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="produtos-section">
+
+  <div class="produtos-container">
+
+    <div
+      class="produtos-grid"
+      id="produtosGrid"
+    >
+
+
+      <!-- PULA PULA -->
+
+      <article
+        class="produto-card"
+        data-nome="pula pula"
+      >
+
+        <div class="produto-img">
+
+          <span class="badge">
+            MAIS PEDIDO
+          </span>
+
+          <span class="disponivel">
+            <i class="fa-solid fa-circle-check"></i>
+            Disponível
+          </span>
+
+
+          <!--
+          Quando você enviar a foto real,
+          podemos trocar por:
+
+          <img src="img/pulapula.jpg">
+          -->
+
+          <div class="imagem-placeholder">
+
+            <i class="fa-solid fa-child-reaching"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="produto-content">
+
+          <h2>
+            Pula-Pula
+          </h2>
+
+
+          <p class="produto-descricao">
+            Clássico das festas infantis.
+            Diversão garantida para as crianças
+            brincarem e gastarem energia.
+          </p>
+
+
+          <div class="produto-info">
+
+            <div class="info-item">
+              <i class="fa-solid fa-children"></i>
+              Infantil
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-house"></i>
+              Festas
+            </div>
+
+          </div>
+
+
+          <div class="produto-footer">
+
+            <div class="produto-preco">
+
+              <small>
+                Valor da locação
+              </small>
+
+              <strong>
+                R$ 149,99
+              </strong>
+
+              <span>
+                Consulte disponibilidade para sua data.
+              </span>
+
+            </div>
+
+
+            <div class="produto-acoes">
+
+              <button
+                class="btn-adicionar"
+                onclick="adicionarCarrinho(
+                  'pula-pula',
+                  'Pula-Pula',
+                  149.99
+                )"
+              >
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Adicionar à reserva
+              </button>
+
+
+              <button
+                class="btn-info"
+                title="Mais informações"
+                onclick="mostrarInfo(
+                  'Pula-Pula',
+                  'Um dos brinquedos mais procurados para festas infantis.'
+                )"
+              >
+                <i class="fa-solid fa-circle-info"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- TOBOGÃ -->
+
+      <article
+        class="produto-card"
+        data-nome="toboga inflavel tobogã"
+      >
+
+        <div class="produto-img">
+
+          <span class="badge">
+            DIVERSÃO
+          </span>
+
+          <span class="disponivel">
+            <i class="fa-solid fa-circle-check"></i>
+            Disponível
+          </span>
+
+
+          <div class="imagem-placeholder">
+
+            <i class="fa-solid fa-person-running"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="produto-content">
+
+          <h2>
+            Tobogã Inflável
+          </h2>
+
+
+          <p class="produto-descricao">
+            Perfeito para quem quer ainda mais emoção
+            na festa, com diversão para a criançada.
+          </p>
+
+
+          <div class="produto-info">
+
+            <div class="info-item">
+              <i class="fa-solid fa-children"></i>
+              Infantil
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-face-laugh-beam"></i>
+              Radical
+            </div>
+
+          </div>
+
+
+          <div class="produto-footer">
+
+            <div class="produto-preco">
+
+              <small>
+                Valor da locação
+              </small>
+
+              <strong>
+                R$ 149,99
+              </strong>
+
+              <span>
+                Consulte disponibilidade para sua data.
+              </span>
+
+            </div>
+
+
+            <div class="produto-acoes">
+
+              <button
+                class="btn-adicionar"
+                onclick="adicionarCarrinho(
+                  'toboga',
+                  'Tobogã Inflável',
+                  149.99
+                )"
+              >
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Adicionar à reserva
+              </button>
+
+
+              <button
+                class="btn-info"
+                title="Mais informações"
+                onclick="mostrarInfo(
+                  'Tobogã Inflável',
+                  'Uma opção divertida para deixar a festa ainda mais animada.'
+                )"
+              >
+                <i class="fa-solid fa-circle-info"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- CASTELO -->
+
+      <article
+        class="produto-card"
+        data-nome="castelo piscina bolinhas piscina de bolinha"
+      >
+
+        <div class="produto-img">
+
+          <span class="badge">
+            PEQUENOS
+          </span>
+
+          <span class="disponivel">
+            <i class="fa-solid fa-circle-check"></i>
+            Disponível
+          </span>
+
+
+          <div class="imagem-placeholder">
+
+            <i class="fa-solid fa-cubes-stacked"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="produto-content">
+
+          <h2>
+            Castelo com Piscina de Bolinhas
+          </h2>
+
+
+          <p class="produto-descricao">
+            Um espaço divertido e colorido,
+            especialmente pensado para os pequenos.
+          </p>
+
+
+          <div class="produto-info">
+
+            <div class="info-item">
+              <i class="fa-solid fa-baby"></i>
+              Pequenos
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-cubes"></i>
+              Bolinhas
+            </div>
+
+          </div>
+
+
+          <div class="produto-footer">
+
+            <div class="produto-preco">
+
+              <small>
+                Valor da locação
+              </small>
+
+              <strong>
+                R$ 149,99
+              </strong>
+
+              <span>
+                Consulte disponibilidade para sua data.
+              </span>
+
+            </div>
+
+
+            <div class="produto-acoes">
+
+              <button
+                class="btn-adicionar"
+                onclick="adicionarCarrinho(
+                  'castelo',
+                  'Castelo com Piscina de Bolinhas',
+                  149.99
+                )"
+              >
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Adicionar à reserva
+              </button>
+
+
+              <button
+                class="btn-info"
+                title="Mais informações"
+                onclick="mostrarInfo(
+                  'Castelo com Piscina de Bolinhas',
+                  'Ideal para crianças menores aproveitarem a festa com muita diversão.'
+                )"
+              >
+                <i class="fa-solid fa-circle-info"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <div
+      class="nenhum"
+      id="nenhumResultado"
+    >
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <h3>
+        Nenhum brinquedo encontrado
+      </h3>
+
+      <p>
+        Tente pesquisar outro nome.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<a
+  href="carrinho.html"
+  class="carrinho-mobile"
+>
+
+  <strong>
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    Minha Reserva
+  </strong>
+
+
+  <span id="contadorMobile">
+    0 itens
+  </span>
+
+</a>
+
+
+<div
+  class="toast"
+  id="toast"
+>
+
+  <i class="fa-solid fa-circle-check"></i>
+
+  <span id="toastTexto">
+    Produto adicionado.
+  </span>
+
+</div>
+
+
+<script>
+
+  const CHAVE_CARRINHO =
+    "encantoKidsCarrinho";
+
+
+  function pegarCarrinho(){
+
+    try{
+
+      return JSON.parse(
+        localStorage.getItem(
+          CHAVE_CARRINHO
+        )
+      ) || [];
+
+    }catch{
+
+      return [];
+
+    }
+
+  }
+
+
+  function salvarCarrinho(
+    carrinho
+  ){
+
+    localStorage.setItem(
+      CHAVE_CARRINHO,
+      JSON.stringify(
+        carrinho
+      )
+    );
+
+  }
+
+
+  function adicionarCarrinho(
+    id,
+    nome,
+    preco
+  ){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    const jaExiste =
+      carrinho.find(
+        item =>
+          item.id === id
+      );
+
+
+    if(jaExiste){
+
+      mostrarToast(
+        nome +
+        " já está na sua reserva."
+      );
+
+      return;
+
+    }
+
+
+    carrinho.push({
+
+      id:id,
+      nome:nome,
+      preco:preco,
+      quantidade:1
+
+    });
+
+
+    salvarCarrinho(
+      carrinho
+    );
+
+
+    atualizarContador();
+
+
+    mostrarToast(
+      nome +
+      " adicionado à reserva!"
+    );
+
+  }
+
+
+  function atualizarContador(){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    const quantidade =
+      carrinho.reduce(
+        (
+          total,
+          item
+        ) =>
+          total +
+          (item.quantidade || 1),
+        0
+      );
+
+
+    document
+      .getElementById(
+        "contadorCarrinho"
+      )
+      .textContent =
+      quantidade;
+
+
+    document
+      .getElementById(
+        "contadorMobile"
+      )
+      .textContent =
+      quantidade === 1
+      ? "1 item"
+      : quantidade + " itens";
+
+  }
+
+
+  let timerToast;
+
+
+  function mostrarToast(
+    mensagem
+  ){
+
+    const toast =
+      document.getElementById(
+        "toast"
+      );
+
+
+    document
+      .getElementById(
+        "toastTexto"
+      )
+      .textContent =
+      mensagem;
+
+
+    toast
+      .classList
+      .add(
+        "mostrar"
+      );
+
+
+    clearTimeout(
+      timerToast
+    );
+
+
+    timerToast =
+      setTimeout(
+        () => {
+
+          toast
+            .classList
+            .remove(
+              "mostrar"
+            );
+
+        },
+        2500
+      );
+
+  }
+
+
+  function mostrarInfo(
+    titulo,
+    texto
+  ){
+
+    alert(
+      titulo +
+      "\n\n" +
+      texto
+    );
+
+  }
+
+
+  function filtrarBrinquedos(){
+
+    const termo =
+      document
+        .getElementById(
+          "campoBusca"
+        )
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const cards =
+      document
+        .querySelectorAll(
+          ".produto-card"
+        );
+
+
+    let encontrados = 0;
+
+
+    cards
+      .forEach(
+        card => {
+
+          const nome =
+            card
+              .dataset
+              .nome;
+
+
+          const mostrar =
+            nome.includes(
+              termo
+            );
+
+
+          card.style.display =
+            mostrar
+            ? "block"
+            : "none";
+
+
+          if(mostrar){
+
+            encontrados++;
+
+          }
+
+        }
+      );
+
+
+    document
+      .getElementById(
+        "resultadoInfo"
+      )
+      .textContent =
+      encontrados === 1
+      ? "1 brinquedo encontrado"
+      : encontrados +
+        " brinquedos encontrados";
+
+
+    document
+      .getElementById(
+        "nenhumResultado"
+      )
+      .style
+      .display =
+      encontrados === 0
+      ? "block"
+      : "none";
+
+
+    document
+      .getElementById(
+        "produtosGrid"
+      )
+      .style
+      .display =
+      encontrados === 0
+      ? "none"
+      : "grid";
+
+  }
+
+
+  atualizarContador();
+
+</script>
+
+</body>
+</html>
