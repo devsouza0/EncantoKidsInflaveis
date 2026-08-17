@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Minha Reserva | Encanto Kids Infláveis</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    :root{
+      --azul:#0b5ed7;
+      --azul-escuro:#083b8f;
+      --azul-claro:#eaf3ff;
+
+      --laranja:#ff7a00;
+      --laranja-escuro:#e56800;
+
+      --verde:#16a34a;
+      --vermelho:#dc2626;
+
+      --fundo:#f6f8fb;
+      --branco:#ffffff;
+
+      --texto:#172033;
+      --texto-suave:#667085;
+
+      --borda:#e4e8ef;
+
+      --sombra:
+        0 12px 35px rgba(15,35,60,.08);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--fundo);
+      color:var(--texto);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    button{
+      font:inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,255,255,.97);
+
+      border-bottom:1px solid var(--borda);
+
+      backdrop-filter:blur(12px);
+    }
+
+    .header-container{
+      max-width:1200px;
+      margin:auto;
+
+      padding:13px 20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo-icon{
+      width:44px;
+      height:44px;
+
+      border-radius:13px;
+
+      background:linear-gradient(
+        135deg,
+        var(--azul),
+        #438cff
+      );
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:20px;
+
+      box-shadow:
+        0 8px 20px rgba(11,94,215,.24);
+    }
+
+    .logo-text strong{
+      display:block;
+      color:var(--azul-escuro);
+      font-size:18px;
+    }
+
+    .logo-text span{
+      display:block;
+
+      font-size:11px;
+
+      color:var(--texto-suave);
+    }
+
+    .btn-voltar{
+      min-height:42px;
+
+      padding:0 15px;
+
+      border-radius:10px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      background:#f1f4f8;
+
+      color:#344054;
+
+      font-size:13px;
+      font-weight:800;
+
+      transition:.2s;
+    }
+
+    .btn-voltar:hover{
+      background:#e8edf4;
+    }
+
+    /* =========================
+       TOPO
+    ========================= */
+
+    .topo{
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255,122,0,.15),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #eef6ff
+        );
+
+      border-bottom:1px solid var(--borda);
+    }
+
+    .topo-container{
+      max-width:1200px;
+      margin:auto;
+
+      padding:48px 20px;
+    }
+
+    .topo-badge{
+      width:max-content;
+
+      max-width:100%;
+
+      background:#fff0e1;
+
+      color:#c55b00;
+
+      border:1px solid #ffd5ad;
+
+      padding:7px 12px;
+
+      border-radius:999px;
+
+      font-size:12px;
+      font-weight:900;
+
+      margin-bottom:14px;
+    }
+
+    .topo h1{
+      font-size:40px;
+
+      color:#132a48;
+
+      letter-spacing:-1.2px;
+    }
+
+    .topo p{
+      margin-top:10px;
+
+      color:var(--texto-suave);
+
+      line-height:1.6;
+
+      max-width:650px;
+    }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .section{
+      padding:35px 20px 90px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .layout{
+      display:grid;
+
+      grid-template-columns:
+        1fr 360px;
+
+      gap:24px;
+
+      align-items:start;
+    }
+
+    /* =========================
+       LISTA
+    ========================= */
+
+    .lista-box{
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:18px;
+
+      box-shadow:var(--sombra);
+
+      overflow:hidden;
+    }
+
+    .lista-topo{
+      padding:20px;
+
+      border-bottom:1px solid var(--borda);
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:15px;
+    }
+
+    .lista-topo h2{
+      font-size:20px;
+
+      color:#1d314d;
+    }
+
+    .lista-topo span{
+      font-size:12px;
+
+      color:var(--texto-suave);
+    }
+
+    .btn-limpar{
+      border:0;
+
+      background:#fff1f2;
+
+      color:#be123c;
+
+      padding:9px 12px;
+
+      border-radius:9px;
+
+      cursor:pointer;
+
+      font-size:11px;
+      font-weight:900;
+
+      transition:.2s;
+    }
+
+    .btn-limpar:hover{
+      background:#ffe4e6;
+    }
+
+    .lista-itens{
+      padding:5px 20px 20px;
+    }
+
+    .item{
+      display:grid;
+
+      grid-template-columns:
+        92px 1fr auto;
+
+      gap:15px;
+
+      align-items:center;
+
+      padding:18px 0;
+
+      border-bottom:1px solid #edf0f3;
+    }
+
+    .item:last-child{
+      border-bottom:0;
+    }
+
+    .item-img{
+      width:92px;
+      height:92px;
+
+      border-radius:14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--azul-claro),
+          #fff2e6
+        );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      flex-shrink:0;
+    }
+
+    .item-img i{
+      font-size:38px;
+
+      color:var(--azul);
+    }
+
+    .item-info h3{
+      font-size:17px;
+
+      color:#1d314d;
+    }
+
+    .item-info p{
+      margin-top:5px;
+
+      font-size:12px;
+
+      color:var(--texto-suave);
+    }
+
+    .item-preco{
+      margin-top:10px;
+
+      font-size:17px;
+      font-weight:900;
+
+      color:var(--azul-escuro);
+    }
+
+    .item-acoes{
+      display:flex;
+      align-items:center;
+
+      gap:9px;
+    }
+
+    .quantidade{
+      display:flex;
+
+      align-items:center;
+
+      border:1px solid var(--borda);
+
+      border-radius:10px;
+
+      overflow:hidden;
+
+      background:#f9fafb;
+    }
+
+    .quantidade button{
+      width:34px;
+      height:34px;
+
+      border:0;
+
+      background:#f4f6f8;
+
+      cursor:pointer;
+
+      font-weight:900;
+
+      color:#344054;
+    }
+
+    .quantidade button:hover{
+      background:#e9eef5;
+    }
+
+    .quantidade span{
+      min-width:34px;
+
+      text-align:center;
+
+      font-size:12px;
+
+      font-weight:900;
+    }
+
+    .btn-remover{
+      width:38px;
+      height:38px;
+
+      border:0;
+
+      border-radius:10px;
+
+      background:#fff1f2;
+
+      color:var(--vermelho);
+
+      cursor:pointer;
+
+      transition:.2s;
+    }
+
+    .btn-remover:hover{
+      background:#ffe4e6;
+    }
+
+    /* =========================
+       RESUMO
+    ========================= */
+
+    .resumo{
+      position:sticky;
+      top:88px;
+
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:18px;
+
+      box-shadow:var(--sombra);
+
+      padding:22px;
+    }
+
+    .resumo h2{
+      font-size:20px;
+
+      color:#1d314d;
+
+      margin-bottom:18px;
+    }
+
+    .linha{
+      display:flex;
+
+      align-items:center;
+      justify-content:space-between;
+
+      gap:10px;
+
+      padding:10px 0;
+
+      font-size:13px;
+
+      color:var(--texto-suave);
+    }
+
+    .linha strong{
+      color:#344054;
+    }
+
+    .divisor{
+      height:1px;
+
+      background:var(--borda);
+
+      margin:8px 0;
+    }
+
+    .total{
+      display:flex;
+
+      align-items:flex-end;
+      justify-content:space-between;
+
+      gap:15px;
+
+      padding:16px 0;
+    }
+
+    .total span{
+      font-size:13px;
+
+      color:var(--texto-suave);
+    }
+
+    .total strong{
+      font-size:27px;
+
+      color:var(--azul-escuro);
+    }
+
+    .aviso{
+      padding:12px;
+
+      border-radius:11px;
+
+      background:#fff8ed;
+
+      border:1px solid #fed7aa;
+
+      color:#9a4c00;
+
+      font-size:11px;
+
+      line-height:1.5;
+
+      margin-bottom:15px;
+    }
+
+    .aviso i{
+      margin-right:5px;
+    }
+
+    .btn-checkout{
+      width:100%;
+
+      min-height:50px;
+
+      border:0;
+
+      border-radius:11px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:8px;
+
+      cursor:pointer;
+
+      font-weight:900;
+
+      transition:.2s;
+
+      box-shadow:
+        0 9px 23px rgba(255,122,0,.24);
+    }
+
+    .btn-checkout:hover{
+      background:var(--laranja-escuro);
+
+      transform:translateY(-2px);
+    }
+
+    .btn-continuar{
+      width:100%;
+
+      min-height:45px;
+
+      margin-top:10px;
+
+      border:1px solid var(--borda);
+
+      border-radius:10px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      background:#f8fafc;
+
+      color:#344054;
+
+      font-size:12px;
+      font-weight:900;
+
+      transition:.2s;
+    }
+
+    .btn-continuar:hover{
+      background:#eef3f8;
+    }
+
+    /* =========================
+       CARRINHO VAZIO
+    ========================= */
+
+    .vazio{
+      display:none;
+
+      padding:60px 20px;
+
+      text-align:center;
+    }
+
+    .vazio-icon{
+      width:85px;
+      height:85px;
+
+      margin:
+        0 auto
+        18px;
+
+      border-radius:50%;
+
+      background:var(--azul-claro);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:var(--azul);
+
+      font-size:34px;
+    }
+
+    .vazio h2{
+      color:#1d314d;
+
+      font-size:22px;
+    }
+
+    .vazio p{
+      max-width:420px;
+
+      margin:
+        9px auto
+        20px;
+
+      color:var(--texto-suave);
+
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .vazio a{
+      display:inline-flex;
+
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      min-height:45px;
+
+      padding:0 18px;
+
+      border-radius:10px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      font-size:13px;
+      font-weight:900;
+    }
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    .toast{
+      position:fixed;
+
+      left:50%;
+      bottom:25px;
+
+      transform:
+        translateX(-50%)
+        translateY(100px);
+
+      opacity:0;
+
+      z-index:5000;
+
+      min-width:250px;
+
+      max-width:90%;
+
+      padding:13px 16px;
+
+      border-radius:11px;
+
+      background:#152238;
+
+      color:white;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,.24);
+
+      font-size:13px;
+      font-weight:700;
+
+      transition:.3s;
+
+      display:flex;
+      align-items:center;
+
+      gap:8px;
+    }
+
+    .toast.mostrar{
+      opacity:1;
+
+      transform:
+        translateX(-50%)
+        translateY(0);
+    }
+
+    .toast i{
+      color:#4ade80;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width:900px){
+
+      .layout{
+        grid-template-columns:1fr;
+      }
+
+      .resumo{
+        position:static;
+      }
+
+    }
+
+    @media(max-width:650px){
+
+      .header-container{
+        padding:11px 14px;
+      }
+
+      .logo-icon{
+        width:40px;
+        height:40px;
+      }
+
+      .logo-text strong{
+        font-size:15px;
+      }
+
+      .logo-text span{
+        font-size:9px;
+      }
+
+      .btn-voltar span{
+        display:none;
+      }
+
+      .topo-container{
+        padding:38px 17px;
+      }
+
+      .topo h1{
+        font-size:31px;
+      }
+
+      .topo p{
+        font-size:14px;
+      }
+
+      .section{
+        padding:
+          20px
+          14px
+          70px;
+      }
+
+      .lista-topo{
+        align-items:flex-start;
+
+        flex-direction:column;
+      }
+
+      .btn-limpar{
+        width:100%;
+      }
+
+      .lista-itens{
+        padding:
+          0
+          15px
+          15px;
+      }
+
+      .item{
+        grid-template-columns:
+          74px 1fr;
+
+        align-items:start;
+      }
+
+      .item-img{
+        width:74px;
+        height:74px;
+      }
+
+      .item-img i{
+        font-size:31px;
+      }
+
+      .item-acoes{
+        grid-column:
+          1 / -1;
+
+        justify-content:space-between;
+
+        padding-left:89px;
+      }
+
+      .item-info h3{
+        font-size:15px;
+      }
+
+      .item-preco{
+        font-size:16px;
+      }
+
+      .resumo{
+        padding:18px;
+      }
+
+      .total strong{
+        font-size:24px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-container">
+
+    <a
+      href="index.html"
+      class="logo"
+    >
+
+      <div class="logo-icon">
+        <i class="fa-solid fa-child-reaching"></i>
+      </div>
+
+      <div class="logo-text">
+        <strong>Encanto Kids</strong>
+        <span>Infláveis</span>
+      </div>
+
+    </a>
+
+
+    <a
+      href="brinquedos.html"
+      class="btn-voltar"
+    >
+
+      <i class="fa-solid fa-arrow-left"></i>
+
+      <span>
+        Continuar alugando
+      </span>
+
+    </a>
+
+  </div>
+
+</header>
+
+
+<section class="topo">
+
+  <div class="topo-container">
+
+    <div class="topo-badge">
+
+      <i class="fa-solid fa-cart-shopping"></i>
+
+      Sua Reserva
+
+    </div>
+
+
+    <h1>
+      Confira os brinquedos escolhidos
+    </h1>
+
+
+    <p>
+      Revise sua reserva antes de continuar.
+      Você ainda poderá informar a data da festa,
+      endereço e seus dados no próximo passo.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+
+    <!-- CARRINHO NORMAL -->
+
+    <div
+      class="layout"
+      id="layoutCarrinho"
+    >
+
+
+      <!-- LISTA -->
+
+      <div class="lista-box">
+
+        <div class="lista-topo">
+
+          <div>
+
+            <h2>
+              Brinquedos selecionados
+            </h2>
+
+            <span id="textoQuantidade">
+              0 itens na reserva
+            </span>
+
+          </div>
+
+
+          <button
+            class="btn-limpar"
+            onclick="limparCarrinho()"
+          >
+
+            <i class="fa-solid fa-trash"></i>
+
+            Limpar reserva
+
+          </button>
+
+        </div>
+
+
+        <div
+          class="lista-itens"
+          id="listaCarrinho"
+        >
+        </div>
+
+      </div>
+
+
+      <!-- RESUMO -->
+
+      <aside class="resumo">
+
+        <h2>
+          Resumo da reserva
+        </h2>
+
+
+        <div class="linha">
+
+          <span>
+            Brinquedos
+          </span>
+
+          <strong id="resumoQuantidade">
+            0
+          </strong>
+
+        </div>
+
+
+        <div class="linha">
+
+          <span>
+            Subtotal
+          </span>
+
+          <strong id="subtotal">
+            R$ 0,00
+          </strong>
+
+        </div>
+
+
+        <div class="divisor"></div>
+
+
+        <div class="total">
+
+          <span>
+            Total estimado
+          </span>
+
+          <strong id="total">
+            R$ 0,00
+          </strong>
+
+        </div>
+
+
+        <div class="aviso">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          O valor apresentado é referente aos
+          brinquedos selecionados. A reserva ainda será
+          confirmada de acordo com a disponibilidade
+          para a data escolhida.
+
+        </div>
+
+
+        <button
+          class="btn-checkout"
+          onclick="irCheckout()"
+        >
+
+          Continuar para o checkout
+
+          <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+
+        <a
+          href="brinquedos.html"
+          class="btn-continuar"
+        >
+
+          <i class="fa-solid fa-plus"></i>
+
+          Continuar alugando
+
+        </a>
+
+      </aside>
+
+    </div>
+
+
+    <!-- VAZIO -->
+
+    <div
+      class="lista-box vazio"
+      id="carrinhoVazio"
+    >
+
+      <div class="vazio-icon">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+      </div>
+
+
+      <h2>
+        Sua reserva está vazia
+      </h2>
+
+
+      <p>
+        Você ainda não adicionou nenhum brinquedo.
+        Veja nosso catálogo e escolha os brinquedos
+        para sua festa.
+      </p>
+
+
+      <a href="brinquedos.html">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Ver brinquedos
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div
+  class="toast"
+  id="toast"
+>
+
+  <i class="fa-solid fa-circle-check"></i>
+
+  <span id="toastTexto">
+    Reserva atualizada.
+  </span>
+
+</div>
+
+
+<script>
+
+  const CHAVE_CARRINHO =
+    "encantoKidsCarrinho";
+
+
+  function pegarCarrinho(){
+
+    try{
+
+      return JSON.parse(
+        localStorage.getItem(
+          CHAVE_CARRINHO
+        )
+      ) || [];
+
+    }catch{
+
+      return [];
+
+    }
+
+  }
+
+
+  function salvarCarrinho(
+    carrinho
+  ){
+
+    localStorage.setItem(
+      CHAVE_CARRINHO,
+      JSON.stringify(
+        carrinho
+      )
+    );
+
+  }
+
+
+  function formatarDinheiro(
+    valor
+  ){
+
+    return valor.toLocaleString(
+      "pt-BR",
+      {
+        style:"currency",
+        currency:"BRL"
+      }
+    );
+
+  }
+
+
+  function iconeProduto(
+    id
+  ){
+
+    if(id === "pula-pula"){
+
+      return "fa-child-reaching";
+
+    }
+
+
+    if(id === "toboga"){
+
+      return "fa-person-running";
+
+    }
+
+
+    if(id === "castelo"){
+
+      return "fa-cubes-stacked";
+
+    }
+
+
+    return "fa-star";
+
+  }
+
+
+  function renderizarCarrinho(){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    const layout =
+      document.getElementById(
+        "layoutCarrinho"
+      );
+
+
+    const vazio =
+      document.getElementById(
+        "carrinhoVazio"
+      );
+
+
+    const lista =
+      document.getElementById(
+        "listaCarrinho"
+      );
+
+
+    if(carrinho.length === 0){
+
+      layout.style.display =
+        "none";
+
+
+      vazio.style.display =
+        "block";
+
+
+      return;
+
+    }
+
+
+    layout.style.display =
+      "grid";
+
+
+    vazio.style.display =
+      "none";
+
+
+    lista.innerHTML =
+      "";
+
+
+    let quantidadeTotal = 0;
+
+    let subtotal = 0;
+
+
+    carrinho.forEach(
+      item => {
+
+        const quantidade =
+          item.quantidade || 1;
+
+
+        const totalItem =
+          item.preco *
+          quantidade;
+
+
+        quantidadeTotal +=
+          quantidade;
+
+
+        subtotal +=
+          totalItem;
+
+
+        const elemento =
+          document.createElement(
+            "div"
+          );
+
+
+        elemento.className =
+          "item";
+
+
+        elemento.innerHTML = `
+
+          <div class="item-img">
+
+            <i class="
+              fa-solid
+              ${iconeProduto(item.id)}
+            "></i>
+
+          </div>
+
+
+          <div class="item-info">
+
+            <h3>
+              ${item.nome}
+            </h3>
+
+            <p>
+              Locação do brinquedo
+            </p>
+
+            <div class="item-preco">
+              ${formatarDinheiro(totalItem)}
+            </div>
+
+          </div>
+
+
+          <div class="item-acoes">
+
+            <div class="quantidade">
+
+              <button
+                onclick="
+                  alterarQuantidade(
+                    '${item.id}',
+                    -1
+                  )
+                "
+              >
+                -
+              </button>
+
+
+              <span>
+                ${quantidade}
+              </span>
+
+
+              <button
+                onclick="
+                  alterarQuantidade(
+                    '${item.id}',
+                    1
+                  )
+                "
+              >
+                +
+              </button>
+
+            </div>
+
+
+            <button
+              class="btn-remover"
+              onclick="
+                removerItem(
+                  '${item.id}'
+                )
+              "
+              title="Remover"
+            >
+
+              <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+          </div>
+
+        `;
+
+
+        lista.appendChild(
+          elemento
+        );
+
+      }
+    );
+
+
+    document
+      .getElementById(
+        "textoQuantidade"
+      )
+      .textContent =
+      quantidadeTotal === 1
+      ? "1 item na reserva"
+      : quantidadeTotal +
+        " itens na reserva";
+
+
+    document
+      .getElementById(
+        "resumoQuantidade"
+      )
+      .textContent =
+      quantidadeTotal;
+
+
+    document
+      .getElementById(
+        "subtotal"
+      )
+      .textContent =
+      formatarDinheiro(
+        subtotal
+      );
+
+
+    document
+      .getElementById(
+        "total"
+      )
+      .textContent =
+      formatarDinheiro(
+        subtotal
+      );
+
+  }
+
+
+  function alterarQuantidade(
+    id,
+    valor
+  ){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    const item =
+      carrinho.find(
+        item =>
+          item.id === id
+      );
+
+
+    if(!item){
+
+      return;
+
+    }
+
+
+    item.quantidade =
+      (
+        item.quantidade ||
+        1
+      ) + valor;
+
+
+    if(item.quantidade < 1){
+
+      item.quantidade = 1;
+
+    }
+
+
+    salvarCarrinho(
+      carrinho
+    );
+
+
+    renderizarCarrinho();
+
+  }
+
+
+  function removerItem(
+    id
+  ){
+
+    let carrinho =
+      pegarCarrinho();
+
+
+    carrinho =
+      carrinho.filter(
+        item =>
+          item.id !== id
+      );
+
+
+    salvarCarrinho(
+      carrinho
+    );
+
+
+    renderizarCarrinho();
+
+
+    mostrarToast(
+      "Brinquedo removido da reserva."
+    );
+
+  }
+
+
+  function limparCarrinho(){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    if(carrinho.length === 0){
+
+      return;
+
+    }
+
+
+    const confirmar =
+      confirm(
+        "Deseja realmente limpar toda a reserva?"
+      );
+
+
+    if(!confirmar){
+
+      return;
+
+    }
+
+
+    localStorage.removeItem(
+      CHAVE_CARRINHO
+    );
+
+
+    renderizarCarrinho();
+
+
+    mostrarToast(
+      "Reserva limpa."
+    );
+
+  }
+
+
+  function irCheckout(){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    if(carrinho.length === 0){
+
+      mostrarToast(
+        "Adicione pelo menos um brinquedo."
+      );
+
+      return;
+
+    }
+
+
+    window.location.href =
+      "checkout.html";
+
+  }
+
+
+  let timerToast;
+
+
+  function mostrarToast(
+    mensagem
+  ){
+
+    const toast =
+      document.getElementById(
+        "toast"
+      );
+
+
+    document
+      .getElementById(
+        "toastTexto"
+      )
+      .textContent =
+      mensagem;
+
+
+    toast.classList.add(
+      "mostrar"
+    );
+
+
+    clearTimeout(
+      timerToast
+    );
+
+
+    timerToast =
+      setTimeout(
+        () => {
+
+          toast.classList.remove(
+            "mostrar"
+          );
+
+        },
+        2300
+      );
+
+  }
+
+
+  renderizarCarrinho();
+
+</script>
+
+</body>
+</html>
