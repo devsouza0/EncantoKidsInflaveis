@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finalizar Reserva | Encanto Kids Infláveis</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    :root{
+      --azul:#0b5ed7;
+      --azul-escuro:#083b8f;
+      --azul-claro:#eaf3ff;
+
+      --laranja:#ff7a00;
+      --laranja-escuro:#e56800;
+
+      --verde:#16a34a;
+      --vermelho:#dc2626;
+
+      --fundo:#f6f8fb;
+      --branco:#ffffff;
+
+      --texto:#172033;
+      --texto-suave:#667085;
+
+      --borda:#e4e8ef;
+
+      --sombra:
+        0 12px 35px rgba(15,35,60,.08);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--fundo);
+      color:var(--texto);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select{
+      font:inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:rgba(255,255,255,.97);
+
+      border-bottom:1px solid var(--borda);
+
+      backdrop-filter:blur(12px);
+    }
+
+    .header-container{
+      max-width:1200px;
+      margin:auto;
+
+      padding:13px 20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:20px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo-icon{
+      width:44px;
+      height:44px;
+
+      border-radius:13px;
+
+      background:linear-gradient(
+        135deg,
+        var(--azul),
+        #438cff
+      );
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:20px;
+
+      box-shadow:
+        0 8px 20px rgba(11,94,215,.24);
+    }
+
+    .logo-text strong{
+      display:block;
+      color:var(--azul-escuro);
+      font-size:18px;
+    }
+
+    .logo-text span{
+      display:block;
+      font-size:11px;
+      color:var(--texto-suave);
+    }
+
+    .btn-voltar{
+      min-height:42px;
+
+      padding:0 15px;
+
+      border-radius:10px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:7px;
+
+      background:#f1f4f8;
+
+      color:#344054;
+
+      font-size:13px;
+      font-weight:800;
+
+      transition:.2s;
+    }
+
+    .btn-voltar:hover{
+      background:#e8edf4;
+    }
+
+    /* =========================
+       TOPO
+    ========================= */
+
+    .topo{
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255,122,0,.15),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #eef6ff
+        );
+
+      border-bottom:1px solid var(--borda);
+    }
+
+    .topo-container{
+      max-width:1200px;
+      margin:auto;
+
+      padding:45px 20px;
+    }
+
+    .topo-badge{
+      width:max-content;
+
+      background:#fff0e1;
+
+      color:#c55b00;
+
+      border:1px solid #ffd5ad;
+
+      padding:7px 12px;
+
+      border-radius:999px;
+
+      font-size:12px;
+      font-weight:900;
+
+      margin-bottom:14px;
+    }
+
+    .topo h1{
+      font-size:39px;
+      color:#132a48;
+      letter-spacing:-1.2px;
+    }
+
+    .topo p{
+      margin-top:10px;
+
+      max-width:650px;
+
+      color:var(--texto-suave);
+
+      line-height:1.6;
+    }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .section{
+      padding:35px 20px 90px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .layout{
+      display:grid;
+
+      grid-template-columns:
+        1fr 370px;
+
+      gap:24px;
+
+      align-items:start;
+    }
+
+    /* =========================
+       FORMULÁRIO
+    ========================= */
+
+    .form-box{
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:18px;
+
+      box-shadow:var(--sombra);
+
+      overflow:hidden;
+    }
+
+    .form-header{
+      padding:22px;
+
+      border-bottom:1px solid var(--borda);
+    }
+
+    .form-header h2{
+      color:#1d314d;
+      font-size:20px;
+    }
+
+    .form-header p{
+      margin-top:5px;
+
+      color:var(--texto-suave);
+
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .form-content{
+      padding:22px;
+    }
+
+    .grupo-titulo{
+      margin-bottom:15px;
+
+      display:flex;
+      align-items:center;
+
+      gap:8px;
+
+      color:#1d314d;
+
+      font-size:14px;
+      font-weight:900;
+    }
+
+    .grupo-titulo i{
+      color:var(--azul);
+    }
+
+    .grupo{
+      margin-bottom:28px;
+    }
+
+    .grid-2{
+      display:grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap:14px;
+    }
+
+    .campo{
+      margin-bottom:14px;
+    }
+
+    .campo label{
+      display:block;
+
+      margin-bottom:6px;
+
+      color:#344054;
+
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .campo label span{
+      color:var(--vermelho);
+    }
+
+    .campo input,
+    .campo textarea,
+    .campo select{
+      width:100%;
+
+      border:1px solid var(--borda);
+
+      border-radius:10px;
+
+      background:#fbfcfe;
+
+      color:var(--texto);
+
+      outline:none;
+
+      padding:12px 13px;
+
+      transition:.2s;
+    }
+
+    .campo input,
+    .campo select{
+      min-height:45px;
+    }
+
+    .campo textarea{
+      resize:vertical;
+      min-height:100px;
+    }
+
+    .campo input:focus,
+    .campo textarea:focus,
+    .campo select:focus{
+      border-color:#7ba9ed;
+
+      box-shadow:
+        0 0 0 3px rgba(11,94,215,.08);
+    }
+
+    .linha-divisor{
+      height:1px;
+
+      background:var(--borda);
+
+      margin:25px 0;
+    }
+
+    .termos{
+      display:flex;
+      gap:10px;
+
+      align-items:flex-start;
+
+      padding:14px;
+
+      background:#f8fafc;
+
+      border:1px solid var(--borda);
+
+      border-radius:11px;
+
+      color:#667085;
+
+      font-size:11px;
+      line-height:1.55;
+    }
+
+    .termos input{
+      margin-top:2px;
+      flex-shrink:0;
+    }
+
+    /* =========================
+       RESUMO
+    ========================= */
+
+    .resumo{
+      position:sticky;
+      top:88px;
+
+      background:white;
+
+      border:1px solid var(--borda);
+
+      border-radius:18px;
+
+      box-shadow:var(--sombra);
+
+      padding:22px;
+    }
+
+    .resumo h2{
+      color:#1d314d;
+
+      font-size:20px;
+
+      margin-bottom:18px;
+    }
+
+    .resumo-item{
+      padding:12px 0;
+
+      border-bottom:1px solid #edf0f3;
+    }
+
+    .resumo-item:last-child{
+      border-bottom:0;
+    }
+
+    .resumo-item-top{
+      display:flex;
+
+      align-items:flex-start;
+      justify-content:space-between;
+
+      gap:15px;
+    }
+
+    .resumo-item strong{
+      font-size:13px;
+
+      color:#344054;
+    }
+
+    .resumo-item span{
+      font-size:12px;
+
+      color:var(--texto-suave);
+    }
+
+    .resumo-item-preco{
+      margin-top:5px;
+
+      font-size:13px;
+
+      font-weight:900;
+
+      color:var(--azul-escuro);
+    }
+
+    .divisor{
+      height:1px;
+
+      background:var(--borda);
+
+      margin:14px 0;
+    }
+
+    .linha{
+      display:flex;
+
+      justify-content:space-between;
+
+      gap:15px;
+
+      padding:8px 0;
+
+      color:var(--texto-suave);
+
+      font-size:13px;
+    }
+
+    .linha strong{
+      color:#344054;
+    }
+
+    .total{
+      display:flex;
+
+      align-items:flex-end;
+      justify-content:space-between;
+
+      gap:15px;
+
+      padding:16px 0;
+    }
+
+    .total span{
+      color:var(--texto-suave);
+
+      font-size:13px;
+    }
+
+    .total strong{
+      color:var(--azul-escuro);
+
+      font-size:26px;
+    }
+
+    .aviso{
+      margin-bottom:15px;
+
+      padding:12px;
+
+      border-radius:11px;
+
+      background:#fff8ed;
+
+      border:1px solid #fed7aa;
+
+      color:#9a4c00;
+
+      font-size:11px;
+      line-height:1.5;
+    }
+
+    .btn-finalizar{
+      width:100%;
+
+      min-height:50px;
+
+      border:0;
+
+      border-radius:11px;
+
+      background:var(--laranja);
+
+      color:white;
+
+      cursor:pointer;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      gap:8px;
+
+      font-weight:900;
+
+      box-shadow:
+        0 9px 23px rgba(255,122,0,.24);
+
+      transition:.2s;
+    }
+
+    .btn-finalizar:hover{
+      background:var(--laranja-escuro);
+
+      transform:translateY(-2px);
+    }
+
+    /* =========================
+       ERROS
+    ========================= */
+
+    .mensagem{
+      display:none;
+
+      margin-bottom:18px;
+
+      padding:13px 14px;
+
+      border-radius:10px;
+
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .mensagem.erro{
+      display:block;
+
+      color:#b42318;
+
+      background:#fef3f2;
+
+      border:1px solid #fecdca;
+    }
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    .toast{
+      position:fixed;
+
+      left:50%;
+      bottom:25px;
+
+      transform:
+        translateX(-50%)
+        translateY(120px);
+
+      opacity:0;
+
+      min-width:260px;
+
+      max-width:90%;
+
+      padding:13px 16px;
+
+      border-radius:11px;
+
+      background:#152238;
+
+      color:white;
+
+      z-index:5000;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,.24);
+
+      font-size:13px;
+      font-weight:700;
+
+      display:flex;
+      align-items:center;
+
+      gap:8px;
+
+      transition:.3s;
+    }
+
+    .toast.mostrar{
+      opacity:1;
+
+      transform:
+        translateX(-50%)
+        translateY(0);
+    }
+
+    .toast i{
+      color:#4ade80;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width:900px){
+
+      .layout{
+        grid-template-columns:1fr;
+      }
+
+      .resumo{
+        position:static;
+      }
+
+    }
+
+    @media(max-width:650px){
+
+      .header-container{
+        padding:11px 14px;
+      }
+
+      .logo-icon{
+        width:40px;
+        height:40px;
+      }
+
+      .logo-text strong{
+        font-size:15px;
+      }
+
+      .logo-text span{
+        font-size:9px;
+      }
+
+      .btn-voltar span{
+        display:none;
+      }
+
+      .topo-container{
+        padding:38px 17px;
+      }
+
+      .topo h1{
+        font-size:31px;
+      }
+
+      .topo p{
+        font-size:14px;
+      }
+
+      .section{
+        padding:
+          20px
+          14px
+          70px;
+      }
+
+      .form-content{
+        padding:17px;
+      }
+
+      .form-header{
+        padding:18px;
+      }
+
+      .grid-2{
+        grid-template-columns:1fr;
+        gap:0;
+      }
+
+      .resumo{
+        padding:18px;
+      }
+
+      .total strong{
+        font-size:24px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-container">
+
+    <a
+      href="index.html"
+      class="logo"
+    >
+
+      <div class="logo-icon">
+        <i class="fa-solid fa-child-reaching"></i>
+      </div>
+
+      <div class="logo-text">
+        <strong>Encanto Kids</strong>
+        <span>Infláveis</span>
+      </div>
+
+    </a>
+
+
+    <a
+      href="carrinho.html"
+      class="btn-voltar"
+    >
+
+      <i class="fa-solid fa-arrow-left"></i>
+
+      <span>
+        Voltar para reserva
+      </span>
+
+    </a>
+
+  </div>
+
+</header>
+
+
+<section class="topo">
+
+  <div class="topo-container">
+
+    <div class="topo-badge">
+
+      <i class="fa-solid fa-clipboard-check"></i>
+
+      Finalizar solicitação
+
+    </div>
+
+
+    <h1>
+      Só faltam os dados da sua festa
+    </h1>
+
+
+    <p>
+      Preencha as informações abaixo para enviar sua
+      solicitação de reserva para a Encanto Kids.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="layout">
+
+
+      <!-- FORMULÁRIO -->
+
+      <div class="form-box">
+
+        <div class="form-header">
+
+          <h2>
+            Dados da reserva
+          </h2>
+
+          <p>
+            Confira seus dados antes de finalizar.
+          </p>
+
+        </div>
+
+
+        <div class="form-content">
+
+          <div
+            id="mensagemErro"
+            class="mensagem"
+          ></div>
+
+
+          <!-- CLIENTE -->
+
+          <div class="grupo">
+
+            <div class="grupo-titulo">
+
+              <i class="fa-solid fa-user"></i>
+
+              Seus dados
+
+            </div>
+
+
+            <div class="campo">
+
+              <label>
+                Nome completo
+                <span>*</span>
+              </label>
+
+              <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome completo"
+              >
+
+            </div>
+
+
+            <div class="grid-2">
+
+              <div class="campo">
+
+                <label>
+                  WhatsApp
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="tel"
+                  id="telefone"
+                  placeholder="(19) 99999-9999"
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label>
+                  Cidade
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="cidade"
+                  placeholder="Sua cidade"
+                >
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="linha-divisor"></div>
+
+
+          <!-- FESTA -->
+
+          <div class="grupo">
+
+            <div class="grupo-titulo">
+
+              <i class="fa-solid fa-calendar-days"></i>
+
+              Informações da festa
+
+            </div>
+
+
+            <div class="grid-2">
+
+              <div class="campo">
+
+                <label>
+                  Data da festa
+                  <span>*</span>
+                </label>
+
+                <input
+                  type="date"
+                  id="dataFesta"
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label>
+                  Horário aproximado
+                </label>
+
+                <input
+                  type="time"
+                  id="horario"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="campo">
+
+              <label>
+                Endereço da festa
+                <span>*</span>
+              </label>
+
+              <input
+                type="text"
+                id="endereco"
+                placeholder="Rua, número, bairro..."
+              >
+
+            </div>
+
+
+            <div class="campo">
+
+              <label>
+                Observações
+              </label>
+
+              <textarea
+                id="observacoes"
+                placeholder="Alguma informação importante sobre a festa?"
+              ></textarea>
+
+            </div>
+
+          </div>
+
+
+          <div class="termos">
+
+            <input
+              type="checkbox"
+              id="confirmacao"
+            >
+
+            <label for="confirmacao">
+              Confirmo que os dados informados estão corretos
+              e estou enviando uma solicitação de reserva.
+              A reserva só será considerada confirmada após
+              o retorno da Encanto Kids.
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESUMO -->
+
+      <aside class="resumo">
+
+        <h2>
+          Resumo do pedido
+        </h2>
+
+
+        <div id="resumoItens"></div>
+
+
+        <div class="divisor"></div>
+
+
+        <div class="linha">
+
+          <span>
+            Quantidade de itens
+          </span>
+
+          <strong id="quantidadeItens">
+            0
+          </strong>
+
+        </div>
+
+
+        <div class="total">
+
+          <span>
+            Total estimado
+          </span>
+
+          <strong id="totalReserva">
+            R$ 0,00
+          </strong>
+
+        </div>
+
+
+        <div class="aviso">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          O envio deste formulário não garante
+          automaticamente a disponibilidade.
+          Nossa equipe ainda confirmará sua reserva.
+
+        </div>
+
+
+        <button
+          class="btn-finalizar"
+          onclick="finalizarReserva()"
+        >
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+          Solicitar Reserva
+
+        </button>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div
+  class="toast"
+  id="toast"
+>
+
+  <i class="fa-solid fa-circle-check"></i>
+
+  <span id="toastTexto">
+    Tudo certo!
+  </span>
+
+</div>
+
+
+<script>
+
+  const CHAVE_CARRINHO =
+    "encantoKidsCarrinho";
+
+
+  function pegarCarrinho(){
+
+    try{
+
+      return JSON.parse(
+        localStorage.getItem(
+          CHAVE_CARRINHO
+        )
+      ) || [];
+
+    }catch{
+
+      return [];
+
+    }
+
+  }
+
+
+  function formatarDinheiro(
+    valor
+  ){
+
+    return valor.toLocaleString(
+      "pt-BR",
+      {
+        style:"currency",
+        currency:"BRL"
+      }
+    );
+
+  }
+
+
+  function carregarResumo(){
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    if(carrinho.length === 0){
+
+      window.location.href =
+        "brinquedos.html";
+
+      return;
+
+    }
+
+
+    const resumo =
+      document.getElementById(
+        "resumoItens"
+      );
+
+
+    resumo.innerHTML =
+      "";
+
+
+    let quantidadeTotal = 0;
+
+    let total = 0;
+
+
+    carrinho.forEach(
+      item => {
+
+        const quantidade =
+          item.quantidade || 1;
+
+
+        const totalItem =
+          item.preco *
+          quantidade;
+
+
+        quantidadeTotal +=
+          quantidade;
+
+
+        total +=
+          totalItem;
+
+
+        resumo.innerHTML += `
+
+          <div class="resumo-item">
+
+            <div class="resumo-item-top">
+
+              <strong>
+                ${item.nome}
+              </strong>
+
+              <span>
+                x${quantidade}
+              </span>
+
+            </div>
+
+            <div class="resumo-item-preco">
+              ${formatarDinheiro(totalItem)}
+            </div>
+
+          </div>
+
+        `;
+
+      }
+    );
+
+
+    document
+      .getElementById(
+        "quantidadeItens"
+      )
+      .textContent =
+      quantidadeTotal;
+
+
+    document
+      .getElementById(
+        "totalReserva"
+      )
+      .textContent =
+      formatarDinheiro(
+        total
+      );
+
+  }
+
+
+  function mostrarErro(
+    texto
+  ){
+
+    const mensagem =
+      document.getElementById(
+        "mensagemErro"
+      );
+
+
+    mensagem.textContent =
+      texto;
+
+
+    mensagem.className =
+      "mensagem erro";
+
+
+    window.scrollTo({
+      top:250,
+      behavior:"smooth"
+    });
+
+  }
+
+
+  function limparErro(){
+
+    const mensagem =
+      document.getElementById(
+        "mensagemErro"
+      );
+
+
+    mensagem.className =
+      "mensagem";
+
+
+    mensagem.textContent =
+      "";
+
+  }
+
+
+  function finalizarReserva(){
+
+    limparErro();
+
+
+    const carrinho =
+      pegarCarrinho();
+
+
+    const nome =
+      document
+        .getElementById(
+          "nome"
+        )
+        .value
+        .trim();
+
+
+    const telefone =
+      document
+        .getElementById(
+          "telefone"
+        )
+        .value
+        .trim();
+
+
+    const cidade =
+      document
+        .getElementById(
+          "cidade"
+        )
+        .value
+        .trim();
+
+
+    const dataFesta =
+      document
+        .getElementById(
+          "dataFesta"
+        )
+        .value;
+
+
+    const horario =
+      document
+        .getElementById(
+          "horario"
+        )
+        .value;
+
+
+    const endereco =
+      document
+        .getElementById(
+          "endereco"
+        )
+        .value
+        .trim();
+
+
+    const observacoes =
+      document
+        .getElementById(
+          "observacoes"
+        )
+        .value
+        .trim();
+
+
+    const confirmacao =
+      document
+        .getElementById(
+          "confirmacao"
+        )
+        .checked;
+
+
+    if(!nome){
+
+      mostrarErro(
+        "Informe seu nome completo."
+      );
+
+      return;
+
+    }
+
+
+    if(!telefone){
+
+      mostrarErro(
+        "Informe seu WhatsApp."
+      );
+
+      return;
+
+    }
+
+
+    if(!cidade){
+
+      mostrarErro(
+        "Informe sua cidade."
+      );
+
+      return;
+
+    }
+
+
+    if(!dataFesta){
+
+      mostrarErro(
+        "Escolha a data da festa."
+      );
+
+      return;
+
+    }
+
+
+    if(!endereco){
+
+      mostrarErro(
+        "Informe o endereço da festa."
+      );
+
+      return;
+
+    }
+
+
+    if(!confirmacao){
+
+      mostrarErro(
+        "Confirme que os dados informados estão corretos."
+      );
+
+      return;
+
+    }
+
+
+    let total = 0;
+
+
+    carrinho.forEach(
+      item => {
+
+        total +=
+          item.preco *
+          (
+            item.quantidade ||
+            1
+          );
+
+      }
+    );
+
+
+    const pedido = {
+
+      nome,
+      telefone,
+      cidade,
+      endereco,
+      dataFesta,
+      horario,
+      observacoes,
+      itens:carrinho,
+      total
+
+    };
+
+
+    console.log(
+      "PEDIDO:",
+      pedido
+    );
+
+
+    localStorage.setItem(
+      "encantoKidsUltimaReserva",
+      JSON.stringify(
+        pedido
+      )
+    );
+
+
+    window.location.href =
+      "confirmacao.html";
+
+  }
+
+
+  carregarResumo();
+
+</script>
+
+</body>
+</html>
