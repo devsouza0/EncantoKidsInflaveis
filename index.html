@@ -116,28 +116,27 @@
     }
 
     .logo-icon{
-      width:46px;
-      height:46px;
+    width:48px;
+    height:48px;
 
-      border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-      background:
-        linear-gradient(
-          135deg,
-          var(--azul),
-          #438cff
-        );
+    flex-shrink:0;
 
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    background:transparent;
+    border-radius:14px;
 
-      color:white;
-      font-size:21px;
+    overflow:hidden;
+}
 
-      box-shadow:
-        0 8px 20px rgba(11,94,215,.25);
-    }
+.logo-icon img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
 
     .logo-text strong{
       display:block;
@@ -1331,8 +1330,8 @@
     <a href="index.html" class="logo">
 
       <div class="logo-icon">
-        <i class="fa-solid fa-child-reaching"></i>
-      </div>
+    <img src="img/logo.png" alt="Encanto Kids Infláveis">
+</div>
 
       <div class="logo-text">
         <strong>Encanto Kids</strong>
